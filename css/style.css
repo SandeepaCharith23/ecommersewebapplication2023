@@ -41,6 +41,36 @@ html::-webkit-scrollbar-thumb {
   background-color: #F1C40F;
 }
 
+.line-down {
+  position: relative;
+  z-index: 0;
+}
+.line-down::before {
+  content: "";
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F1C40F;
+  z-index: -1;
+  -webkit-clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
+          clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-5rem);
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -76,6 +106,35 @@ html::-webkit-scrollbar-thumb {
   display: none;
 }
 
+.home {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  background: #7a73dd;
+}
+.home .image {
+  margin-top: 5rem;
+  flex: 1 1 40rem;
+}
+.home .image img {
+  width: 100%;
+  animation: floating 4s linear infinite;
+}
+.home .content {
+  flex: 1 1 40rem;
+}
+.home .content h3 {
+  font-size: 5rem;
+}
+.home .content p {
+  font-size: 2rem;
+  padding: 1rem 0;
+  line-height: 3rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
 @media (max-width: 2560px) {
   html {
     font-size: 72.5%;
@@ -84,12 +143,15 @@ html::-webkit-scrollbar-thumb {
     padding: 1rem;
   }
 }
-@media (max-width: 1410px) {
+@media (max-width: 1440px) {
   html {
     font-size: 62.5%;
   }
   .header {
     padding: 1rem;
+  }
+  section {
+    padding: 1rem 1rem;
   }
 }
 @media (max-width: 1212px) {
@@ -162,6 +224,12 @@ html::-webkit-scrollbar-thumb {
   .header .button {
     display: none;
   }
+  .home {
+    gap: 0.5rem;
+  }
+  section {
+    padding: 10rem 10rem;
+  }
 }
 @media (max-width: 425px) {
   .header {
@@ -169,6 +237,9 @@ html::-webkit-scrollbar-thumb {
   }
   .header .logo {
     display: inline-flex;
+  }
+  section {
+    padding: 5rem 5rem;
   }
 }
 @media (max-width: 320px) {

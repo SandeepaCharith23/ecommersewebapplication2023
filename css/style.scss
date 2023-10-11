@@ -13,6 +13,7 @@
 $black:#000;
 $white:#fff;
 $primarycolorblue: #4D45CB;
+$primarycolorlightblue: #7a73dd;
 $primarycoloryellow: #F1C40F;
 $border:0.2rem solid $black;
 
@@ -49,6 +50,37 @@ html{
 
     &:hover{
         background-color: $primarycoloryellow;
+    }
+}
+
+.line-down{
+    position: relative;
+    z-index: 0;
+
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0;
+        right: 0;
+        height:100% ;
+        width: 100%;
+        background-color: #F1C40F;
+        z-index: -1;
+        clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
+    }
+}
+
+section{
+ padding: 5rem 10%;
+}
+
+@keyframes floating{
+    0%,100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-5rem);
     }
 }
 
@@ -96,6 +128,42 @@ html{
     }
 }
 
+.home{
+
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    background: $primarycolorlightblue;
+
+    .image{
+        margin-top: 5rem;
+        flex: 1 1 40rem;
+
+        img{
+            width: 100%;
+            animation: floating 4s linear infinite;
+        }
+    }
+
+    .content{
+        flex: 1 1 40rem;
+        
+        h3{
+            font-size: 5rem;
+            
+        }
+
+        p{
+            font-size: 2rem;
+            padding:1rem 0;
+            line-height: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    }
+}
+
 
 
 
@@ -137,13 +205,17 @@ html{
     }
 }
 
-@media (max-width:1410px){
+@media (max-width:1440px){
 
     html{
         font-size: 62.5%;
     }
     .header{
         padding: 1rem;
+    }
+
+    section{
+        padding: 1rem 1rem;
     }
 }
 
@@ -227,6 +299,16 @@ html{
         }
 
     }
+
+    .home{
+        gap: 0.5rem;
+    }
+
+    section{
+        padding: 10rem 10rem;
+    }
+
+    
 }
 
 @media (max-width:425px){
@@ -240,6 +322,10 @@ html{
         }
 
        
+    }
+
+    section{
+        padding: 5rem 5rem;
     }
 }
 
