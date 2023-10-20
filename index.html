@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
 
     <!-- link font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-     <!--Link custom css file for slider-->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    
+    <!--Link custom css file for slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <!-- link the css file link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- header section start -->
 
@@ -29,10 +31,32 @@
             <a href="#faq">FAQ</a>
 
         </nav>
-
+        
+        <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+        </div>
         <a href="#" class="button">Join us</a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="Search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    
+        <form action="" class="login-form">
+            <h3>Login Form</h3>
+            <input type="email" placeholder="Please Enter Your Email address" class="textfield-box">
+            <input type="password" placeholder="Please Enter Your password" class="textfield-box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">Remember me</label>
+                <a href="#">Forget password</a>
+            </div>
+    
+            <input type="submit" value="login now" class="button">
+            <p>Don't have an account <a href="#">Create new Account</a></p>
+        </form>
     </header>
     <!-- header section end -->
 
@@ -41,85 +65,111 @@
     <section class="home" id="home">
 
         <div class="image">
-            <img src="images/logo.png" alt="no image" >
+            <img src="images/logo.png" alt="no image">
         </div>
 
         <div class="content">
-            <h3><span class="line-down">"Empowering Connections, Empowering You."</span> Friendly, Cost effective Solution Provider</h3>
+            <h3><span class="line-down">"Empowering Connections, Empowering You."</span> Friendly, Cost effective
+                Solution Provider</h3>
             <p>
-                "Providing top-tier electrical engineering solutions and cutting-edge products to power your projects. Our expertise illuminates innovation and sparks efficiency in every connection."</p>
+                "Providing top-tier electrical engineering solutions and cutting-edge products to power your projects.
+                Our expertise illuminates innovation and sparks efficiency in every connection."</p>
             <a href="#" class="button">Know more</a>
         </div>
     </section>
     <!-- home section end -->
 
     <!-- our services section start-->
-<section id="services" class="services">
+    <section id="services" class="services">
 
-<div class="heading">
-    <span>Our services</span>
-    <h1>What we provide to you...</h1>
-</div>
+        <div class="heading">
+            <span>Our services</span>
+            <h1>What we provide to you...</h1>
+        </div>
 
-<div class="swiper services-slider">
-    <div class="swiper-wrapper">
-                
-                
+        <div class="swiper services-slider">
+            <div class="swiper-wrapper">
+
+
                 <section class="swiper-slide slide" style="background :url(images_folder/imagesA.jpg) no-repeat;">
-                <div class="content">
-                    <img src="images/servicesbanner01.png" alt="no image">
-                    <h3>Electrical System Design and Estimation</h3>
-                    <p>
-                        Electrical system design and estimation are key components in the field of electrical engineering and construction.
-                        They involve the planning, layout, and cost assessment of electrical systems for various applications, such as
-                        residential, commercial, industrial, or infrastructure projects.</p>
-                    
-                    <a href="#features" class="button">Know More</a>
-                </div>
-                </section>
-    
-                <section class="swiper-slide slide" style="background :url(images_folder/imagesB.jpg) no-repeat;">
+                    <div class="image">
+                        <img src="images/servicesbanner01.png" alt="no image">
+                    </div>
+                   
                     <div class="content">
+                       
+                        <h3>Electrical System Design and Estimation</h3>
+                        <p>
+                            Electrical system design and estimation are key components in the field of electrical
+                            engineering and construction.
+                            They involve the planning, layout, and cost assessment of electrical systems for various
+                            applications, such as
+                            residential, commercial, industrial, or infrastructure projects.</p>
+
+                        <a href="#features" class="button">Know More</a>
+                    </div>
+                </section>
+
+                <section class="swiper-slide slide" style="background :url(images_folder/imagesB.jpg) no-repeat;">
+                    <div class="image">
                         <img src="images/servicesbanner02.png" alt="no image">
+                    </div>
+                    
+                    <div class="content">
+                       
                         <h3>Lightining protction System Design and Installation</h3>
-                        <p>A Lightning Protection System (LPS) is a set of measures and components designed to protect structures and
-                            occupants from the damaging effects of lightning strikes. It involves both design and installation to ensure
+                        <p>A Lightning Protection System (LPS) is a set of measures and components designed to protect
+                            structures and
+                            occupants from the damaging effects of lightning strikes. It involves both design and
+                            installation to ensure
                             the safety of buildings, people, and sensitive equipment</p>
                         <a href="#features" class="button">Know More</a>
                     </div>
                 </section>
-                
+
                 <section class="swiper-slide slide" style="background :url(images_folder/imagesE.jpg) no-repeat;">
-                    <div class="content">
+                    <div class="image">
                         <img src="images/servicesbanner03.png" alt="no image">
+                    </div>
+                    
+                    <div class="content">
+                        
                         <h3>Generator/Motor Repair and Services </h3>
-                        <p>Generator and motor repair and services involve the maintenance, repair, and optimization of electrical
-                            generators and electric motors. These are crucial components in various industries, such as manufacturing,
+                        <p>Generator and motor repair and services involve the maintenance, repair, and optimization of
+                            electrical
+                            generators and electric motors. These are crucial components in various industries, such as
+                            manufacturing,
                             energy production, construction, and more. </p>
                         <a href="#features" class="button">Know More</a>
                     </div>
                 </section>
-                
+
                 <section class="swiper-slide slide" style="background :url(images_folder/imagesE.jpg) no-repeat;">
-                    <div class="content">
+                    
+                    <div class="image">
                         <img src="images/servicesbanner04.png" alt="no image">
+                    </div>
+                    <div class="content">
+                       
                         <h3>Industrial troubleshoot and Installation </h3>
-                        <p>Industrial troubleshooting and installation involve the processes of identifying and resolving issues, as
-                            well as setting up or replacing industrial equipment, machinery, and systems in various manufacturing and
+                        <p>Industrial troubleshooting and installation involve the processes of identifying and
+                            resolving issues, as
+                            well as setting up or replacing industrial equipment, machinery, and systems in various
+                            manufacturing and
                             industrial settings. </p>
                         <a href="#features" class="button">Know More</a>
                     </div>
                 </section>
-    
-    
+
+
             </div>
-    
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
 
 
-</section>
+    </section>
     <!-- our services section ends -->
 
     <!-- aboutus section start -->
@@ -132,7 +182,11 @@
             <h3><span class="line-down">About D & SE Company Ltd</span></h3>
             <h2>Welcome to D & SE company – Your Trusted Partner in Electrical Engineering and Products.</h2>
             <p>Who We Are..<br>
-                At D & SE Company Ltd, we are a team of dedicated professionals specializing in Electrical System Design, Estimation, Lightning Protection System Design and Installation, Generator/Motor Repair and Services, and Industrial Troubleshooting and Installation. With a rich history of 5-6 years, we've earned a reputation for excellence and reliability in the Electrical Excellence and Electronic  industry.</p>
+                At D & SE Company Ltd, we are a team of dedicated professionals specializing in Electrical System
+                Design, Estimation, Lightning Protection System Design and Installation, Generator/Motor Repair and
+                Services, and Industrial Troubleshooting and Installation. With a rich history of 5-6 years, we've
+                earned a reputation for excellence and reliability in the Electrical Excellence and Electronic industry.
+            </p>
             <!-- <h2>Why Choose Us?</h2>
             <p>
                 <li>Expertise: Our team comprises industry professionals with years of experience.</li>
@@ -144,7 +198,7 @@
     <!-- aboutus section end -->
 
     <!-- Features section start -->
-     <section class="feature" id="features">
+    <section class="feature" id="features">
         <div class="heading">
             <span>Our features</span>
             <h1>what makes us different from others</h1>
@@ -158,11 +212,13 @@
                 <div class="content">
                     <h3>Electrical System Design and Estimation</span></h3>
                     <p>
-                        <ul>
-                            <li><b>Tailored Solutions:<b> Customized electrical designs to meet your specific requirements.</li>
-                            <li>Efficiency Optimization: Expert estimation to ensure efficient electrical systems.</li>
-                            <li>Regulatory Compliance: Designs that adhere to industry standards and safety regulations.</li>
-                        </ul>
+                    <ul>
+                        <li><b>Tailored Solutions:<b> Customized electrical designs to meet your specific requirements.
+                        </li>
+                        <li>Efficiency Optimization: Expert estimation to ensure efficient electrical systems.</li>
+                        <li>Regulatory Compliance: Designs that adhere to industry standards and safety regulations.
+                        </li>
+                    </ul>
                     </p>
                     <a href="#" class="button">Read more</a>
                 </div>
@@ -176,11 +232,12 @@
                     <h3>Lightning Protection System Design and Installation</h3>
                     <p>
                     <ul>
-                        <li>Expertise in Protection: Safeguard your assets with our comprehensive lightning protection system designs.</li>
+                        <li>Expertise in Protection: Safeguard your assets with our comprehensive lightning protection
+                            system designs.</li>
                         <li>Professional Installation: Precise installation to ensure maximum safety.</li>
                         <li>Minimized Risks: Protection against lightning strikes and potential damage.</li>
                     </ul>
-                </p>
+                    </p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
@@ -192,12 +249,12 @@
                 <div class="content">
                     <h3>Industrial Troubleshooting and Installation</h3>
                     <p>
-                        <ul>
+                    <ul>
                         <li>Efficient Solutions: Troubleshooting expertise to resolve industrial equipment issues.</li>
                         <li>Seamless Installation: Precise installation services for your industrial needs.</li>
                         <li>Optimized Performance: Ensuring smooth operations and equipment performance.</li>
                     </ul>
-                </p>
+                    </p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
@@ -208,11 +265,14 @@
                 </div>
                 <div class="content">
                     <h3>Generator/Motor Repair and Services</h3>
-                    <p> <ul>
-                        <li>Expert Repair: Skilled technicians for the repair and maintenance of generators and motors.</li>
+                    <p>
+                    <ul>
+                        <li>Expert Repair: Skilled technicians for the repair and maintenance of generators and motors.
+                        </li>
                         <li>Reliable Services: Ensuring your equipment operates at peak performance.</li>
                         <li>Downtime Reduction: Rapid response to minimize downtime and disruptions.</li>
-                    </ul></p>
+                    </ul>
+                    </p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
@@ -223,11 +283,13 @@
                 </div>
                 <div class="content">
                     <h3>Quality Electronic Products with Guarantee</h3>
-                    <p> <ul>
+                    <p>
+                    <ul>
                         <li>Product Range: Explore our selection of electronic items and products</li>
                         <li>Quality Assurance: We stand behind the quality of our electronic products.</li>
                         <li>Solid Guarantee: Enjoy peace of mind with our guarantee on all electronic items.</li>
-                    </ul></p>
+                    </ul>
+                    </p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
@@ -238,11 +300,15 @@
                 </div>
                 <div class="content">
                     <h3>Expert Team</h3>
-                    <p> <ul>
-                        <li>Industry Professionals: Our dedicated team of experts brings years of industry experience</li>
+                    <p>
+                    <ul>
+                        <li>Industry Professionals: Our dedicated team of experts brings years of industry experience
+                        </li>
                         <li>Customer-Centric: We prioritize your satisfaction and understand your unique needs.</li>
-                        <li>Innovation: Staying at the forefront of technological advancements for top-notch solutions.</li>
-                    </ul></p>
+                        <li>Innovation: Staying at the forefront of technological advancements for top-notch solutions.
+                        </li>
+                    </ul>
+                    </p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
@@ -253,11 +319,14 @@
                 </div>
                 <div class="content">
                     <h3>Community Involvement</h3>
-                    <p> <ul>
+                    <p>
+                    <ul>
                         <li>Giving Back: We actively participate in local initiatives and community events.</li>
-                        <li>Making a Difference: Contributing to [Community involvement, e.g., charity events, educational programs, etc.]</li>
-                
-                    </ul></p>
+                        <li>Making a Difference: Contributing to [Community involvement, e.g., charity events,
+                            educational programs, etc.]</li>
+
+                    </ul>
+                    </p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
@@ -268,16 +337,20 @@
                 </div>
                 <div class="content">
                     <h3>Get in Touch</h3>
-                    <p> <ul>
-                        <li>Reach Out: We're here to assist you. Feel free to [Contact Us] for inquiries, quotes, or more information.</li>
-                        <li>Your Trusted Partner: Partner with D & SE Company Ltd for all your electrical and electronic needs.</li>
-                
-                    </ul></p>
+                    <p>
+                    <ul>
+                        <li>Reach Out: We're here to assist you. Feel free to [Contact Us] for inquiries, quotes, or
+                            more information.</li>
+                        <li>Your Trusted Partner: Partner with D & SE Company Ltd for all your electrical and electronic
+                            needs.</li>
+
+                    </ul>
+                    </p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
         </div>
-     </section>
+    </section>
     <!-- Features section End -->
 
 
@@ -287,7 +360,7 @@
 
 
 
-   
+
 
 
     <!-- link custom js file -->
@@ -297,19 +370,20 @@
 
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
-      
+
         var swiper = new Swiper(".services-slider", {
-        loop:true,
-        grabCursor:true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-      </script>
-    
-    
-    
-    
+            loop: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+
+
 </body>
+
 </html>

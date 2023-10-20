@@ -20,7 +20,7 @@ html::-webkit-scrollbar {
   width: 1rem;
 }
 html::-webkit-scrollbar-track {
-  background: #F1C40F;
+  background: #7067f2;
 }
 html::-webkit-scrollbar-thumb {
   background: #000;
@@ -43,14 +43,14 @@ html::-webkit-scrollbar-thumb {
   margin-top: 1rem;
   padding: 1rem 3rem;
   font-size: 2rem;
-  color: #fff;
+  color: #ffffff;
   background: #4D45CB;
   border: 0.2rem solid #000;
   border-radius: 0%;
   cursor: pointer;
 }
 .button:hover {
-  background-color: #F1C40F;
+  background-color: #f3b90b;
 }
 
 .line-down {
@@ -65,14 +65,10 @@ html::-webkit-scrollbar-thumb {
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: #F1C40F;
+  background-color: #f3b90b;
   z-index: -1;
   -webkit-clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
           clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
-}
-
-section {
-  border: 0.2rem solid #000;
 }
 
 @keyframes floating {
@@ -84,6 +80,7 @@ section {
   }
 }
 .header {
+  max-height: 10vh;
   position: sticky;
   top: 0;
   left: 0;
@@ -92,7 +89,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   padding: 3rem 10%;
 }
@@ -117,6 +114,121 @@ section {
   font-size: 3rem;
   display: none;
 }
+.header .icons div {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: #eee;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 0.6rem;
+}
+.header .icons div:hover {
+  background: #4D45CB;
+  color: #ffffff;
+}
+.header .search-form {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80rem;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeIn 0.2s linear;
+}
+.header .search-form.active {
+  display: flex;
+}
+.header .search-form input {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  background: #eee;
+  font-size: 1.6rem;
+  color: #666;
+}
+.header .search-form lable {
+  font-size: 3rem;
+  cursor: pointer;
+  margin: 0 3rem;
+}
+.header .search-form lable:hover {
+  color: #F1C40F;
+  background-color: #000;
+}
+.header .login-form {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.2s linear;
+  display: none;
+  border: 0.2rem solid #000;
+}
+.header .login-form.active {
+  display: block;
+}
+.header .login-form h3 {
+  font-size: 3rem;
+  color: #000;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+.header .login-form .textfield-box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  background: #eee;
+  font-size: 1.6rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+.header .login-form .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.header .login-form .flex label {
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+}
+.header .login-form .flex a {
+  font-size: 1.5rem;
+  color: #000;
+  margin-left: auto;
+}
+.header .login-form .flex a:hover {
+  color: #F1C40F;
+}
+.header .login-form .button {
+  width: 100%;
+}
+.header .login-form p {
+  font-size: 2rem;
+  color: #000;
+  line-height: 1.5;
+  padding-top: 1rem;
+}
+.header .login-form p a {
+  color: #F1C40F;
+}
+.header .login-form p a:hover {
+  text-decoration: underline;
+}
 
 .home {
   min-height: 50vh;
@@ -138,42 +250,51 @@ section {
   flex: 1 1 40rem;
 }
 .home .content h3 {
-  font-size: 5rem;
+  font-size: 4rem;
+  color: #000;
+  text-transform: capitalize;
 }
 .home .content p {
   font-size: 2rem;
+  color: #000;
+  text-transform: capitalize;
   padding: 1rem 0;
   line-height: 3rem;
   font-family: "Courier New", Courier, monospace;
 }
 
 .services {
-  background-color: #fff;
+  margin: 1rem;
+  padding-bottom: 5rem;
+  min-height: 50vh;
 }
 .services .heading {
   text-align: center;
   margin-bottom: 0.5rem;
-  background-color: #4D45CB;
+  margin-top: 1rem;
 }
 .services .heading span {
   font-size: 2.5rem;
+  color: #000;
+  text-transform: capitalize;
 }
 .services .heading h1 {
   font-size: 4rem;
+  color: #000;
+  text-transform: capitalize;
   padding-top: 0.5rem;
-  background-color: #4D45CB;
 }
-.services .services-slider,
+.services .services-slider {
+  padding-bottom: 2rem;
+}
 .services .slide {
-  background-color: #F1C40F;
-  min-height: 50rem;
   display: flex;
+  width: 100%;
   align-items: center;
   position: relative;
   background-size: cover !important;
   background-position: center !important;
 }
-.services .services-slider::before,
 .services .slide::before {
   content: "";
   position: absolute;
@@ -183,65 +304,69 @@ section {
   width: 100%;
   background: linear-gradient(50deg, var(--white), transparent);
 }
-.services .services-slider .content,
-.services .slide .content {
-  background-color: #7067f2;
-  width: 100%;
-  height: 50%;
-  position: relative;
-  padding: 1rem;
+.services .slide .image {
+  flex: 1 1 50rem;
 }
-.services .services-slider .content img,
-.services .slide .content img {
-  background-color: #4D45CB;
+.services .slide .image img {
   width: 100%;
   height: 100%;
 }
-.services .services-slider .content h3,
+.services .slide .content {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  flex: 1 1 50rem;
+  border: 0.2rem solid #000;
+}
 .services .slide .content h3 {
   font-size: 2rem;
-  color: var(--black);
+  color: #000;
   text-transform: capitalize;
   text-transform: uppercase;
+  text-align: center;
 }
-.services .services-slider .content p,
 .services .slide .content p {
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: #000;
   line-height: 1.5;
   padding: 1rem;
+  text-align: start;
 }
 .services .swiper-button-next,
 .services .swiper-button-prev {
   top: initial;
-  bottom: 0;
   left: initial;
-  right: 0;
+  bottom: 2rem;
+  right: 2rem;
   height: 7rem;
   width: 7rem;
   line-height: 7rem;
-  font-size: 3rem;
-  background-color: var(--white);
+  font-size: 4rem;
+  background-color: #ffffff;
+  border: 0.2rem solid #000;
 }
 .services .swiper-button-next:hover,
 .services .swiper-button-prev:hover {
-  background: var(--yellow);
+  background: #F1C40F;
 }
 .services .swiper-button-next::after,
 .services .swiper-button-prev::after {
   font-size: 4rem;
-  color: var(--black);
+  color: #000;
 }
 .services .swiper-button-prev {
-  right: 7rem;
+  right: 9rem;
 }
 
 .aboutus {
+  background: #7067f2;
   min-height: 50vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 .aboutus .image {
   flex-wrap: 1 1 42rem;
@@ -254,6 +379,7 @@ section {
   border: 0.2rem solid #000;
   border-radius: 2rem;
   padding: 1rem 2rem;
+  margin: 1rem;
   flex: 1 1 42rem;
 }
 .aboutus .content h3 {
@@ -271,9 +397,6 @@ section {
   line-height: 2rem;
 }
 
-.feature {
-  background-color: #c7c3f9;
-}
 .feature .box-container .box {
   display: flex;
   flex-wrap: wrap;
@@ -382,7 +505,7 @@ section {
     left: 0;
     right: 0;
     border-top: 0.2rem solid #000;
-    background: #fff;
+    background: #ffffff;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: 0.2s linear;
@@ -413,6 +536,9 @@ section {
   .header .logo {
     display: inline-flex;
   }
+  .services {
+    padding-bottom: 1rem;
+  }
   .services .heading {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -424,8 +550,33 @@ section {
     font-size: 3.5rem;
     padding-top: 0.5rem;
   }
+  .services .swiper-button-next,
+  .services .swiper-button-prev {
+    top: initial;
+    left: initial;
+    bottom: 1rem;
+    right: 1rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 3rem;
+    background-color: #ffffff;
+    border: 0.2rem solid #000;
+  }
+  .services .swiper-button-next:hover,
+  .services .swiper-button-prev:hover {
+    background: #F1C40F;
+  }
+  .services .swiper-button-next::after,
+  .services .swiper-button-prev::after {
+    font-size: 3rem;
+    color: #000;
+  }
+  .services .swiper-button-prev {
+    right: 6rem;
+  }
   section {
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 @media (max-width: 320px) {

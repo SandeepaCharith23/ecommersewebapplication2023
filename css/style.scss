@@ -11,13 +11,21 @@
     text-transform: none;
 }
 
-$black: #000;
-$white: #fff;
-$primarycolorblue: #4D45CB;
-$primarycolorlightblue: #7067f2;
-$primarycolorlightblue1: #c7c3f9;
-$primarycoloryellow: #F1C40F;
-$border: 0.2rem solid $black;
+
+        $black: #000;
+        $white: #ffffff;
+        $primarycolorblue: #4D45CB;
+        $primarycolorlightblue: #7067f2;
+        $primarycolorlightblue1: #c7c3f9;
+        $yellow:#F1C40F;
+        $primarycoloryellow: #f3b90b;
+        $border: 0.2rem solid $black;
+        $light-color: #666;
+        $light-bg: #eee;
+        $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+
+
 
 
 @mixin grid($val) {
@@ -28,14 +36,36 @@ $border: 0.2rem solid $black;
 
 @mixin titleText($titleSize) {
     font-size: $titleSize;
-    color: var(--black);
+    color: $black;
+    text-transform: capitalize;
+}
+
+@mixin paraText($titleSize) {
+    font-size: $titleSize;
+    color: $black;
     text-transform: capitalize;
 }
 
 @mixin graphText($graphSize) {
     font-size: $graphSize;
-    color: var(--light-color);
+    color: $black;
     line-height: 1.5;
+}
+
+@mixin iconBox() {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: $light-bg;
+    color: $black;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        background: $primarycolorblue;
+        color: $white;
+    }
 }
 
 
@@ -51,7 +81,7 @@ html {
     }
 
     &::-webkit-scrollbar-track {
-        background: $primarycoloryellow ;
+        background: $primarycolorlightblue;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -102,16 +132,17 @@ html {
         right: 0;
         height: 100%;
         width: 100%;
-        background-color: #F1C40F;
+        background-color: $primarycoloryellow;
         z-index: -1;
         clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
     }
 }
 
-section {
-    //padding: 1rem ;
-   border: $border;
-}
+// section {
+//     //padding: 1rem ;
+//    border: $border;
+//    border-radius: 2%;
+// }
 
 @keyframes floating {
 
@@ -126,6 +157,7 @@ section {
 }
 
 .header {
+    max-height: 10vh;
     position: sticky;
     top: 0;
     left: 0;
@@ -169,6 +201,141 @@ section {
         display: none;
 
     }
+
+    .icons div {
+        @include iconBox();
+        margin-left: 0.6rem;
+    }
+
+    //start of -Search Form
+    .search-form {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80rem;
+        background:$white;
+        box-shadow: $box-shadow;
+        padding: 1rem;
+        display: none;
+        align-items: center;
+        gap: 1rem;
+        animation: fadeIn .2s linear;
+
+        &.active {
+            display: flex;
+        }
+
+        input {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            background: $light-bg;
+            font-size: 1.6rem;
+            color:$light-color;
+        }
+
+        lable {
+
+            font-size: 3rem;
+            cursor: pointer;
+            margin: 0 3rem;
+
+            &:hover {
+                color:$yellow;
+                background-color: $black;
+            }
+
+
+        }
+    }
+
+    //End of -Search Form
+
+    //start of -login form 
+    .login-form {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: $white;
+        box-shadow: $box-shadow;
+        padding: 2rem;
+        text-align: center;
+        animation: fadeIn .2s linear;
+        display: none;
+        border: $border;
+
+        &.active {
+            display: block;
+        }
+
+        h3 {
+            @include titleText(3rem);
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+
+        }
+
+        .textfield-box {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            background: $light-bg;
+            font-size: 1.6rem;
+            color:$light-color;
+            margin: .5rem 0;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
+
+            label {
+                font-size: 1.5rem;
+                color: $light-color;
+                cursor: pointer;
+            }
+
+            a {
+                font-size: 1.5rem;
+                color: $black;
+                margin-left: auto;
+
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+
+
+
+
+        }
+
+        .button {
+            width: 100%;
+        }
+
+        p {
+            @include graphText(2rem);
+            padding-top: 1rem;
+
+            a {
+                color: $yellow;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+
+        }
+    }
+
+    //End of -login form 
 }
 
 .home {
@@ -194,12 +361,13 @@ section {
         flex: 1 1 40rem;
 
         h3 {
-            font-size: 5rem;
+        
+            @include titleText(4rem);
 
         }
 
         p {
-            font-size: 2rem;
+            @include paraText(2rem); 
             padding: 1rem 0;
             line-height: 3rem;
             font-family: 'Courier New', Courier, monospace;
@@ -212,31 +380,43 @@ section {
 
 
 .services {
-    background-color: $white;
-
+    //background-color: $primarycolorlightblue1;
+    margin: 1rem;
+    padding-bottom: 5rem;
+    min-height: 50vh;
+    
     .heading{
 
         text-align: center;
         margin-bottom: 0.5rem;
-        background-color: #4D45CB;
+        margin-top: 1rem;
+        //background-color: #4D45CB;
     
         span {
-            font-size: 2.5rem;
+            @include paraText(2.5rem);
+
         }
     
         h1 {
-            font-size: 4rem;
+            @include titleText(4rem);
             padding-top: 0.5rem;
-            background-color: #4D45CB;
+            //background-color: #4D45CB;
         }
     }
-    .services-slider,
+
+
+    .services-slider{
+        
+        padding-bottom: 2rem;
+    }
     .slide {
-        background-color: #F1C40F;
-        min-height: 50rem;
+      // background-color: #F1C40F;
         display: flex;
+        width: 100%;
         align-items: center;
         position: relative;
+        //border: $border;
+        //border-radius: 2%;
         background-size: cover !important;
         background-position: center !important;
 
@@ -250,27 +430,41 @@ section {
             background: linear-gradient(50deg, var(--white), transparent);
         }
 
-        .content {
-            background-color: #7067f2;
-            width: 100%;
-            height: 50%;
-            position: relative;
-            padding: 1rem;
+       .image{
+        flex: 1 1 50rem;
+        
+        img{
+            // background-color: #4D45CB;
+             width: 100%;
+             height: 100%;
+             
+            // border: $border;
+             
+         }
+       }
 
-            img{
-                background-color: #4D45CB;
-                width: 100%;
-                height: 100%;
-            }
+        .content {
+           // background-color: #67f295;
+            width: 100%;
+            position: relative;
+            align-items: center;
+            padding:1rem;
+            margin:1rem;
+            flex: 1 1 50rem;
+            border: $border;
+
+           
 
             h3 {
                 @include titleText(2rem);
                 text-transform: uppercase;
+                text-align: center
             }
 
             p {
                 @include graphText(1.5rem);
                 padding: 1rem;
+                text-align: start;
             }
         }
     }
@@ -278,17 +472,19 @@ section {
     .swiper-button-next,
     .swiper-button-prev {
         top: initial;
-        bottom: 0;
         left: initial;
-        right: 0;
+        bottom: 2rem;
+        right: 2rem;
         height: 7rem;
         width: 7rem;
         line-height: 7rem;
-        font-size: 3rem;
-        background-color: var(--white);
+        font-size: 4rem;
+        background-color: $white;
+        border: $border;
+        
 
         &:hover {
-            background: var(--yellow);
+            background: $yellow;
         }
     }
 
@@ -296,23 +492,24 @@ section {
     .swiper-button-prev::after {
 
         font-size: 4rem;
-        color: var(--black);
+        color: $black;
     }
 
 
     .swiper-button-prev {
-        right: 7rem;
+       // background-color: #4D45CB;
+        right: 9rem;
     }
     
 }
 
 .aboutus {
-
+    background: $primarycolorlightblue;
     min-height: 50vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 
     .image {
         flex-wrap: 1 1 42rem;
@@ -327,6 +524,7 @@ section {
         border: $border;
         border-radius: 2rem;
         padding: 1rem 2rem;
+        margin: 1rem;
         flex: 1 1 42rem;
 
         h3 {
@@ -350,7 +548,7 @@ section {
 }
 
 .feature {
-    background-color: $primarycolorlightblue1;
+   // background-color: $primarycolorlightblue1;
 
     .box-container .box {
         display: flex;
@@ -573,6 +771,7 @@ section {
     }
     
     .services{
+        padding-bottom: 1rem;
         .heading{
             text-align: center;
             margin-bottom: 1.5rem;
@@ -586,13 +785,45 @@ section {
                 padding-top: 0.5rem;
             } 
         }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+        top: initial;
+        left: initial;
+        bottom: 1rem;
+        right: 1rem;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 3rem;
+        background-color: $white;
+         border: $border;
+        
+
+        &:hover {
+            background: $yellow;
+        }
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+
+        font-size: 3rem;
+        color: $black;
+    }
+
+
+    .swiper-button-prev {
+       // background-color: #4D45CB;
+        right: 6rem;
+    }
     }
 
 
     
 
     section {
-        padding: 1rem 1rem;
+        padding: 0.5rem 0.5rem;
     }
 }
 
