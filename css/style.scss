@@ -177,7 +177,7 @@ html {
         transform: translateY(-5rem);
     }
 }
-
+// start of the header section -css
 .header {
     min-height: 10vh;
     position: sticky;
@@ -274,7 +274,6 @@ html {
 
         }
     }
-
     //End of -Search Form
 
     //start of -login form 
@@ -387,7 +386,9 @@ html {
 
     //End of -login form 
 }
+//End of the header section -css
 
+// start of the home section -css
 .home {
 
     min-height: 90vh;
@@ -428,7 +429,9 @@ html {
     
 }
 
+//End of the home section -css
 
+//start of the services section -css
 .services {
     //background-color: $primarycolorlightblue1;
     min-height: 90vh;
@@ -554,6 +557,9 @@ html {
     
 }
 
+//End of the services section -css
+
+//start of the aboutus section -css
 .aboutus {
     background: $primarycolorlightblue;
     min-height: 50vh;
@@ -597,7 +603,9 @@ html {
 
     }
 }
+//End of the aboutus section -css
 
+//start of the feature section -css
 .feature {
    // background-color: $primarycolorlightblue1;
    min-height: 60vh;
@@ -659,6 +667,73 @@ html {
     }
 
 }
+
+//End of the feature section -css
+
+
+//Start of the reviews section-css
+.reviews {
+    min-height: 40vh;
+    background-color: $primarycolorlightblue;
+    padding: 2rem;
+    .slide {
+        border: $border;
+        padding: 2rem;
+        p {
+            @include graphText(2.5rem);
+            padding: 1.5rem;
+            position: relative;
+            margin-bottom: 2.0rem;
+            background: var(--light-bg);
+            
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -1rem;
+                left: 2rem;
+                width: 2rem;
+                height: 2rem;
+                background: var(--light-bg);
+                transform: rotate(45deg);
+            }
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
+
+            img {
+                width: 7rem;
+                height: 7rem;
+
+
+            }
+
+            h3 {
+                @include titleText(2rem);
+            }
+
+            h4 {
+                @include graphText(1rem);
+            }
+
+            .stars {
+                padding-top: 0.5rem;
+
+                i {
+                    font-size: 1.5rem;
+                    color: var(--yellow);
+                }
+
+            }
+        }
+    }
+
+}
+//End of the reviews section-css
 
 
 

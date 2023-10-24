@@ -353,6 +353,89 @@
         </div>
     </section>
     <!-- Features section End -->
+    <!-- Reviews section start -->
+    <section class="reviews" id="reviews">
+        <h1 class="heading">Our clients reviews</h1>
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <p>"We had a great experience with ABC Construction. They were professional, reliable, and affordable. We would definitely recommend them to anyone."</p>
+                    <div class="user">
+                        <img src="images/userimage01.jpg" alt="">
+                        <div class="info">
+                            <h3>Mr.Sandeepa Charith</h3>
+                            <h4>CEO-MASS holdings</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>"I was very impressed with the work that ABC Construction did on my home. They were very organized and efficient, and they cleaned up after themselves every day. I would definitely use them again."</p>
+                    <div class="user">
+                        <img src="images/userimage02 .png" alt="">
+                        <div class="info">
+                            <h3>Mr.Ramidu Charuka</h3>
+                            <h4>CEO-AG soft solution</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>"I had a lot of questions about my project, and the team at ABC Construction was always happy to answer them. They were also very patient with me, even when I changed my mind a few times. I would definitely recommend them."</p>
+                    <div class="user">
+                        <img src="images/userimage03.jpg" alt="">
+                        <div class="info">
+                            <h3>Mr.Gihan Bawantha</h3>
+                            <h4>Software Engineer</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide slide">
+                    <p>"ABC Construction went above and beyond to make sure that my project was completed to my satisfaction. They were always available to answer my questions, and they were always willing to go the extra mile. I would definitely recommend them."</p>
+                    <div class="user">
+                        <img src="images/userimage01.jpg" alt="">
+                        <div class="info">
+                            <h3>Mr.Thushan Chamika</h3>
+                            <h4>Army Officer</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                
+            </div>
+        </div>
+    </section>
+    <!--End of the review section-->
 
 
 
@@ -381,6 +464,33 @@
             },
         });
     </script>
+
+
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+  
+    var swiper = new Swiper(".reviews-slider", {
+    loop:true,
+    grabCursor:true,
+    spaceBetween:20,
+    breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          
+        },
+       
+      },
+   
+  });
+  </script>
 
 
 
