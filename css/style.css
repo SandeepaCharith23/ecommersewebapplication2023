@@ -40,7 +40,6 @@ html::-webkit-scrollbar-thumb {
 
 .button {
   display: inline-block;
-  margin-top: 1rem;
   padding: 1rem 3rem;
   font-size: 2rem;
   color: #ffffff;
@@ -80,7 +79,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 .header {
-  max-height: 10vh;
+  min-height: 10vh;
   position: sticky;
   top: 0;
   left: 0;
@@ -111,7 +110,7 @@ html::-webkit-scrollbar-thumb {
 }
 .header #menu-btn {
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2rem;
   display: none;
 }
 .header .icons div {
@@ -120,13 +119,15 @@ html::-webkit-scrollbar-thumb {
   line-height: 5rem;
   font-size: 2rem;
   background: #eee;
-  color: #000;
+  color: #ffffff;
+  border: 0.2rem solid #000;
   cursor: pointer;
   text-align: center;
+  background: #4D45CB;
   margin-left: 0.6rem;
 }
 .header .icons div:hover {
-  background: #4D45CB;
+  background: #f3b90b;
   color: #ffffff;
 }
 .header .search-form {
@@ -134,7 +135,7 @@ html::-webkit-scrollbar-thumb {
   top: 120%;
   left: 50%;
   transform: translateX(-50%);
-  width: 80rem;
+  width: 80%;
   background: #ffffff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -153,8 +154,24 @@ html::-webkit-scrollbar-thumb {
   font-size: 1.6rem;
   color: #666;
 }
+.header .search-form i {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 2rem;
+  background: #eee;
+  color: #ffffff;
+  border: 0.2rem solid #000;
+  cursor: pointer;
+  text-align: center;
+  background: #4D45CB;
+}
+.header .search-form i:hover {
+  background: #f3b90b;
+  color: #ffffff;
+}
 .header .search-form lable {
-  font-size: 3rem;
+  font-size: 4rem;
   cursor: pointer;
   margin: 0 3rem;
 }
@@ -179,12 +196,40 @@ html::-webkit-scrollbar-thumb {
 .header .login-form.active {
   display: block;
 }
-.header .login-form h3 {
-  font-size: 3rem;
+.header .login-form .login-heading {
+  display: flex;
+}
+.header .login-form .login-heading h3 {
+  font-size: 4rem;
   color: #000;
   text-transform: capitalize;
   padding-bottom: 1rem;
-  text-transform: uppercase;
+}
+.header .login-form .login-heading .close-button {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: #eee;
+  color: #ffffff;
+  border: 0.2rem solid #000;
+  cursor: pointer;
+  text-align: center;
+  background: #4D45CB;
+  margin: 1rem;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.header .login-form .login-heading .close-button:hover {
+  background: #f3b90b;
+  color: #ffffff;
+}
+.header .login-form .login-heading .close-button i {
+  font-size: 2rem; /* Set the font size for the close icon */
+  color: #ffffff; /* Set the color of the close icon */
+  padding: 5px; /* Add some padding for the icon */
 }
 .header .login-form .textfield-box {
   width: 100%;
@@ -231,7 +276,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .home {
-  min-height: 50vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -264,9 +309,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 .services {
+  min-height: 90vh;
   margin: 1rem;
   padding-bottom: 5rem;
-  min-height: 50vh;
 }
 .services .heading {
   text-align: center;
@@ -397,40 +442,49 @@ html::-webkit-scrollbar-thumb {
   line-height: 2rem;
 }
 
-.feature .box-container .box {
+.feature {
+  min-height: 60vh;
+}
+.feature .box-container {
+  margin: 1rem;
+}
+.feature .box {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
   align-items: center;
-  gap: 2rem;
-  min-height: 60vh;
+  gap: 1rem;
   margin: 1rem 0;
   border: 0.2rem solid #000;
 }
-.feature .box-container .box:nth-child(even) {
+.feature .box:nth-child(even) {
   flex-flow: row-reverse wrap;
 }
-.feature .box-container .box:last-child {
+.feature .box:last-child {
   margin-bottom: 0;
 }
-.feature .box-container .box .image {
-  padding: 2rem;
+.feature .box .image {
+  padding: 1rem;
   flex: 1 1 42rem;
 }
-.feature .box-container .box .image img {
+.feature .box .image img {
   width: 100%;
 }
-.feature .box-container .box .content {
-  padding: 5rem;
+.feature .box .content {
+  padding: 1rem 5rem;
   flex: 1 1 42rem;
 }
-.feature .box-container .box .content h3 {
-  font-size: 2rem;
-  line-height: 4rem;
+.feature .box .content h3 {
+  font-size: 3rem;
+  color: #000;
+  text-transform: capitalize;
+  line-height: 3.5rem;
 }
-.feature .box-container .box .content li {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.feature .box .content li {
+  font-size: 2.5rem;
+  color: #000;
+  text-transform: capitalize;
+  line-height: 3.5rem;
 }
 
 @media (max-width: 2560px) {
@@ -439,6 +493,8 @@ html::-webkit-scrollbar-thumb {
   }
   .header {
     padding: 1rem;
+    display: flex;
+    font-size: 90%;
   }
 }
 @media (max-width: 1440px) {
@@ -475,6 +531,9 @@ html::-webkit-scrollbar-thumb {
   .header {
     padding: 1rem;
   }
+  .header .navbar a {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 968px) {
   html {
@@ -482,6 +541,10 @@ html::-webkit-scrollbar-thumb {
   }
   .header {
     padding: 0.5rem;
+  }
+  .header .button {
+    font-size: 1.75rem;
+    padding: 1rem 2rem;
   }
 }
 @media (max-width: 768px) {
@@ -492,7 +555,6 @@ html::-webkit-scrollbar-thumb {
     padding: 0.5rem;
   }
   .header #menu-btn {
-    padding: 1rem;
     display: inline-block;
     transition: 0.2s linear;
   }
@@ -531,10 +593,21 @@ html::-webkit-scrollbar-thumb {
 }
 @media (max-width: 425px) {
   .header {
+    min-height: 10vh;
     padding: 1rem;
   }
   .header .logo {
-    display: inline-flex;
+    font-size: 2rem;
+    display: inline;
+  }
+  .header .logo i {
+    font-size: 0.5rem;
+  }
+  .header .logo .fa-cogs {
+    display: none;
+  }
+  .header .icons {
+    display: inline;
   }
   .services {
     padding-bottom: 1rem;

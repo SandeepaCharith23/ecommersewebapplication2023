@@ -2,6 +2,7 @@ let menubutton=document.querySelector('#menu-btn');
 let navbar=document.querySelector('.header .navbar');
 let searchForm=document.querySelector('.header .search-form');//select the searchbar
 let loginForm=document.querySelector('.header .login-form');//select the loginform
+let loginformcloseButton=document.querySelector('.header .login-form #close-button');
 
 menubutton.onclick=()=>{
     menubutton.classList.toggle('fa-times');
@@ -9,18 +10,30 @@ menubutton.onclick=()=>{
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
 }
+loginformcloseButton.onclick=()=>{
+    loginForm.classList.remove('active');
+}
 
 document.querySelector('#search-btn').onclick=()=>{
     searchForm.classList.toggle('active');
     navbar.classList.remove('active-navbar');
+    menubutton.classList.remove('fa-times');
     loginForm.classList.remove('active');
+   
 };
+
+
 
 document.querySelector('#login-btn').onclick=()=>{
     loginForm.classList.toggle('active');
     navbar.classList.remove('active-navbar');
+    menubutton.classList.remove('fa-times');
     searchForm.classList.remove('active');
 };
+
+document.querySelector('#searchclosebutton').onclick=()=>{
+    searchForm.classList.remove('active');
+}
 
 
 navbar.onclick=()=>{

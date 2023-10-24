@@ -58,15 +58,38 @@
     line-height: 5rem;
     font-size: 2rem;
     background: $light-bg;
-    color: $black;
+    color: $white;
+    border: $border;
     cursor: pointer;
     text-align: center;
+    background: $primarycolorblue;
+   
 
     &:hover {
-        background: $primarycolorblue;
+        background: $primarycoloryellow;
         color: $white;
     }
 }
+
+@mixin smalliconBox() {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    background: $light-bg;
+    color: $white;
+    border: $border;
+    cursor: pointer;
+    text-align: center;
+    background: $primarycolorblue;
+   
+
+    &:hover {
+        background: $primarycoloryellow;
+        color: $white;
+    }
+}
+
 
 
 html {
@@ -106,7 +129,6 @@ html {
 
 .button {
     display: inline-block;
-    margin-top: 1rem;
     padding: 1rem 3rem;
     font-size: 2rem;
     color: $white;
@@ -157,7 +179,7 @@ html {
 }
 
 .header {
-    max-height: 10vh;
+    min-height: 10vh;
     position: sticky;
     top: 0;
     left: 0;
@@ -197,7 +219,7 @@ html {
 
     #menu-btn {
         cursor: pointer;
-        font-size: 3rem;
+        font-size: 2rem;
         display: none;
 
     }
@@ -213,7 +235,7 @@ html {
         top: 120%;
         left: 50%;
         transform: translateX(-50%);
-        width: 80rem;
+        width: 80%;
         background:$white;
         box-shadow: $box-shadow;
         padding: 1rem;
@@ -234,9 +256,13 @@ html {
             color:$light-color;
         }
 
+        i{
+            @include smalliconBox();
+        }
+
         lable {
 
-            font-size: 3rem;
+            font-size: 4rem;
             cursor: pointer;
             margin: 0 3rem;
 
@@ -270,12 +296,36 @@ html {
             display: block;
         }
 
+       .login-heading{
+       
+        display: flex;
+        
+     
         h3 {
-            @include titleText(3rem);
+            
+            @include titleText(4rem);
             padding-bottom: 1rem;
-            text-transform: uppercase;
-
+            
         }
+
+        .close-button{
+            position: absolute;
+            @include iconBox();
+            margin: 1rem;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+         }
+    
+         .close-button i {
+            font-size: 2rem; /* Set the font size for the close icon */
+            color: $white; /* Set the color of the close icon */
+            padding: 5px; /* Add some padding for the icon */
+        }
+        
+       }
+
+     
 
         .textfield-box {
             width: 100%;
@@ -340,7 +390,7 @@ html {
 
 .home {
 
-    min-height: 50vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -381,9 +431,10 @@ html {
 
 .services {
     //background-color: $primarycolorlightblue1;
+    min-height: 90vh;
     margin: 1rem;
     padding-bottom: 5rem;
-    min-height: 50vh;
+
     
     .heading{
 
@@ -549,14 +600,20 @@ html {
 
 .feature {
    // background-color: $primarycolorlightblue1;
-
-    .box-container .box {
+   min-height: 60vh;
+    .box-container {
+        //background-color: $primarycolorblue;
+        margin: 1rem;
+    }
+    
+    .box {
+        //background-color: $primarycoloryellow;
         display: flex;
         flex-wrap: wrap;
         padding: 1rem;
         align-items: center;
-        gap: 2rem;
-        min-height: 60vh;
+        gap: 1rem;
+       
         margin: 1rem 0;
         border: $border;
         &:nth-child(even){
@@ -569,7 +626,7 @@ html {
 
 
         .image {
-            padding: 2rem;
+            padding: 1rem;
             flex: 1 1 42rem;
 
 
@@ -579,19 +636,21 @@ html {
         }
 
         .content {
-            padding: 5rem;
+            padding: 1rem 5rem;
             flex: 1 1 42rem;
 
             h3 {
-                font-size: 2rem;
-                line-height: 4rem;
+                @include titleText(3rem);
+               // font-size: 3rem;
+                line-height: 3.5rem;
 
             }
 
 
             li {
-                font-size: 1.5rem;
-                line-height: 2rem;
+                @include paraText(2.5rem);
+               // font-size: 2.5rem;
+                line-height: 3.5rem;
             }
 
         }
@@ -639,6 +698,10 @@ html {
 
     .header {
         padding: 1rem;
+        display: flex;
+        font-size: 90%;
+
+    
     }
 }
 
@@ -686,6 +749,11 @@ html {
 
     .header {
         padding: 1rem;
+        
+
+        .navbar a {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -696,6 +764,11 @@ html {
 
     .header {
         padding: 0.5rem;
+
+        .button{
+            font-size: 1.75rem;
+            padding: 1rem 2rem;
+        }
     }
 }
 
@@ -708,7 +781,7 @@ html {
         padding: 0.5rem;
 
         #menu-btn {
-            padding: 1rem;
+            
             display: inline-block;
             transition: 0.2s linear;
 
@@ -760,13 +833,27 @@ html {
     
 
     .header {
-
+        
+        min-height: 10vh;
         padding: 1rem;
 
         .logo {
-            display: inline-flex;
-        }
+            font-size: 2rem;
+            display: inline;
 
+            i {
+                font-size: 0.5rem;
+    
+            }
+            .fa-cogs{
+                display: none;
+            }
+        }
+        
+        .icons{
+            
+            display: inline;
+        }
 
     }
     
