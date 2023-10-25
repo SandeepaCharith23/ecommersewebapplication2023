@@ -40,7 +40,8 @@ html::-webkit-scrollbar-thumb {
 
 .button {
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
+  margin-right: 2rem;
   font-size: 2rem;
   color: #ffffff;
   background: #4D45CB;
@@ -79,7 +80,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 .header {
-  min-height: 10vh;
+  min-height: 12vh;
   position: sticky;
   top: 0;
   left: 0;
@@ -93,12 +94,12 @@ html::-webkit-scrollbar-thumb {
   padding: 3rem 10%;
 }
 .header .logo {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #4D45CB;
   font-weight: bolder;
 }
 .header .logo i {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 .header .navbar a {
   margin: 0 1rem;
@@ -309,9 +310,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 .services {
-  min-height: 90vh;
+  min-height: 60vh;
   margin: 1rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 .services .heading {
   text-align: center;
@@ -407,7 +408,7 @@ html::-webkit-scrollbar-thumb {
 
 .aboutus {
   background: #7067f2;
-  min-height: 50vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -497,7 +498,7 @@ html::-webkit-scrollbar-thumb {
   padding: 2rem;
 }
 .reviews .slide p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #000;
   line-height: 1.5;
   padding: 1.5rem;
@@ -543,14 +544,37 @@ html::-webkit-scrollbar-thumb {
   color: var(--yellow);
 }
 
+.footer {
+  padding: 1rem;
+  text-align: center;
+}
+.footer .links .button {
+  margin: 0.5rem;
+}
+.footer .credit {
+  font-size: 2rem;
+  color: #000;
+  text-transform: capitalize;
+}
+.footer .credit span a {
+  color: #f3b90b;
+  font-weight: bold;
+}
+.footer .credit span a:hover {
+  color: #000;
+}
+.footer .credit span i {
+  color: #000;
+}
+
 @media (max-width: 2560px) {
   html {
     font-size: 72.5%;
   }
   .header {
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
-    font-size: 90%;
+    font-size: 60%;
   }
 }
 @media (max-width: 1440px) {
@@ -667,10 +691,11 @@ html::-webkit-scrollbar-thumb {
   }
   .services {
     padding-bottom: 1rem;
+    min-height: 60vh;
   }
   .services .heading {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .services .heading span {
     font-size: 3rem;
@@ -706,6 +731,9 @@ html::-webkit-scrollbar-thumb {
   }
   section {
     padding: 0.5rem 0.5rem;
+  }
+  .footer {
+    font-size: 1rem;
   }
 }
 @media (max-width: 320px) {

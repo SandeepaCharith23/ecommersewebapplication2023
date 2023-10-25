@@ -129,7 +129,8 @@ html {
 
 .button {
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
     font-size: 2rem;
     color: $white;
     background: $primarycolorblue;
@@ -179,7 +180,7 @@ html {
 }
 // start of the header section -css
 .header {
-    min-height: 10vh;
+    min-height: 12vh;
     position: sticky;
     top: 0;
     left: 0;
@@ -194,12 +195,12 @@ html {
 
     .logo {
 
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #4D45CB;
         font-weight: bolder;
 
         i {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
 
         }
 
@@ -434,9 +435,9 @@ html {
 //start of the services section -css
 .services {
     //background-color: $primarycolorlightblue1;
-    min-height: 90vh;
+    min-height: 60vh;
     margin: 1rem;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 
     
     .heading{
@@ -562,7 +563,7 @@ html {
 //start of the aboutus section -css
 .aboutus {
     background: $primarycolorlightblue;
-    min-height: 50vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -676,11 +677,12 @@ html {
     min-height: 40vh;
     background-color: $primarycolorlightblue;
     padding: 2rem;
+
     .slide {
         border: $border;
         padding: 2rem;
         p {
-            @include graphText(2.5rem);
+            @include graphText(2.0rem);
             padding: 1.5rem;
             position: relative;
             margin-bottom: 2.0rem;
@@ -735,6 +737,41 @@ html {
 }
 //End of the reviews section-css
 
+//start of the footer section
+.footer{
+    padding: 1rem;
+    text-align: center;
+    
+   
+
+    .links .button{
+        margin: 0.5rem;
+    }
+
+    .credit{
+
+        @include titleText(2rem);
+        span{
+            a{
+            color: $primarycoloryellow;
+            font-weight: bold;
+
+            &:hover{
+                color: $black;
+            }
+            }
+
+            i{
+                color: $black;
+            }
+
+            
+        }
+
+       
+    }
+}
+//End of the footer section
 
 
 
@@ -772,14 +809,15 @@ html {
     }
 
     .header {
-        padding: 1rem;
+        padding: 0.5rem;
         display: flex;
-        font-size: 90%;
+        font-size: 60%;
 
     
     }
 }
 
+//Laptop -L size
 @media (max-width:1440px) {
 
     html {
@@ -904,6 +942,8 @@ html {
 
 }
 
+
+//Mobile phone L size
 @media (max-width:425px) {
     
 
@@ -934,9 +974,10 @@ html {
     
     .services{
         padding-bottom: 1rem;
+        min-height: 60vh;
         .heading{
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.0rem;
         
             span {
                 font-size: 3.0rem;
@@ -979,13 +1020,14 @@ html {
        // background-color: #4D45CB;
         right: 6rem;
     }
-    }
-
-
-    
+    } 
 
     section {
         padding: 0.5rem 0.5rem;
+    }
+
+    .footer{
+        font-size: 1rem;
     }
 }
 
