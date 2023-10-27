@@ -4,6 +4,27 @@ let searchForm=document.querySelector('.header .search-form');//select the searc
 let loginForm=document.querySelector('.header .login-form');//select the loginform
 let loginformcloseButton=document.querySelector('.header .login-form #close-button');
 
+
+let productBnnerNextbtn=document.querySelector('.products .navigation .next-btn');
+let productBnnerPrevbtn=document.querySelector('.products .navigation .prev-btn');
+let productBnnerSlides=document.querySelectorAll('.slide');
+let productBnnerslideIcons=document.querySelectorAll('.slide-icon');
+let productBnnernumberslideIcons=productBnnerSlides.length;
+var slideNumber=0;
+
+productBnnerNextbtn.onclick=()=>{
+    productBnnerSlides.forEach((slide)=>{slide.classList.remove("active")});
+    productBnnerslideIcons.forEach((slideIcon)=>{slideIcon.classList.remove("active")});
+    slideNumber++;
+
+    if(slideNumber >(productBnnernumberslideIcons-1)){
+        slideNumber=0;
+    }
+
+    productBnnerSlides[slideNumber].classList.add("active");
+    productBnnernumberslideIcons[slideNumber].classList.add("active");
+};
+
 menubutton.onclick=()=>{
     menubutton.classList.toggle('fa-times');
     navbar.classList.toggle('active-navbar');

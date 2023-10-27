@@ -12,17 +12,18 @@
 }
 
 
-        $black: #000;
-        $white: #ffffff;
-        $primarycolorblue: #4D45CB;
-        $primarycolorlightblue: #7067f2;
-        $primarycolorlightblue1: #c7c3f9;
-        $yellow:#F1C40F;
-        $primarycoloryellow: #f3b90b;
-        $border: 0.2rem solid $black;
-        $light-color: #666;
-        $light-bg: #eee;
-        $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+$black: #000;
+$white: #ffffff;
+$primarycolorblue: #4D45CB;
+$primarycolorlightblue: #7067f2;
+$primarycolorlightblue1: #c7c3f9;
+$primarycolorlightgreen:#36eaba;
+$yellow: #F1C40F;
+$primarycoloryellow: #f3b90b;
+$border: 0.2rem solid $black;
+$light-color: #666;
+$light-bg: #eee;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 
 
 
@@ -63,7 +64,7 @@
     cursor: pointer;
     text-align: center;
     background: $primarycolorblue;
-   
+
 
     &:hover {
         background: $primarycoloryellow;
@@ -82,7 +83,7 @@
     cursor: pointer;
     text-align: center;
     background: $primarycolorblue;
-   
+
 
     &:hover {
         background: $primarycoloryellow;
@@ -178,6 +179,7 @@ html {
         transform: translateY(-5rem);
     }
 }
+
 // start of the header section -css
 .header {
     min-height: 12vh;
@@ -237,7 +239,7 @@ html {
         left: 50%;
         transform: translateX(-50%);
         width: 80%;
-        background:$white;
+        background: $white;
         box-shadow: $box-shadow;
         padding: 1rem;
         display: none;
@@ -254,10 +256,10 @@ html {
             padding: 1.2rem 1.4rem;
             background: $light-bg;
             font-size: 1.6rem;
-            color:$light-color;
+            color: $light-color;
         }
 
-        i{
+        i {
             @include smalliconBox();
         }
 
@@ -268,13 +270,14 @@ html {
             margin: 0 3rem;
 
             &:hover {
-                color:$yellow;
+                color: $yellow;
                 background-color: $black;
             }
 
 
         }
     }
+
     //End of -Search Form
 
     //start of -login form 
@@ -296,43 +299,46 @@ html {
             display: block;
         }
 
-       .login-heading{
-       
-        display: flex;
-        
-     
-        h3 {
-            
-            @include titleText(4rem);
-            padding-bottom: 1rem;
-            
+        .login-heading {
+
+            display: flex;
+
+
+            h3 {
+
+                @include titleText(4rem);
+                padding-bottom: 1rem;
+
+            }
+
+            .close-button {
+                position: absolute;
+                @include iconBox();
+                margin: 1rem;
+                top: 0;
+                right: 0;
+                cursor: pointer;
+            }
+
+            .close-button i {
+                font-size: 2rem;
+                /* Set the font size for the close icon */
+                color: $white;
+                /* Set the color of the close icon */
+                padding: 5px;
+                /* Add some padding for the icon */
+            }
+
         }
 
-        .close-button{
-            position: absolute;
-            @include iconBox();
-            margin: 1rem;
-            top: 0;
-            right: 0;
-            cursor: pointer;
-         }
-    
-         .close-button i {
-            font-size: 2rem; /* Set the font size for the close icon */
-            color: $white; /* Set the color of the close icon */
-            padding: 5px; /* Add some padding for the icon */
-        }
-        
-       }
 
-     
 
         .textfield-box {
             width: 100%;
             padding: 1.2rem 1.4rem;
             background: $light-bg;
             font-size: 1.6rem;
-            color:$light-color;
+            color: $light-color;
             margin: .5rem 0;
         }
 
@@ -387,6 +393,7 @@ html {
 
     //End of -login form 
 }
+
 //End of the header section -css
 
 // start of the home section -css
@@ -413,13 +420,13 @@ html {
         flex: 1 1 40rem;
 
         h3 {
-        
+
             @include titleText(4rem);
 
         }
 
         p {
-            @include paraText(2rem); 
+            @include paraText(2rem);
             padding: 1rem 0;
             line-height: 3rem;
             font-family: 'Courier New', Courier, monospace;
@@ -427,7 +434,7 @@ html {
     }
 
 
-    
+
 }
 
 //End of the home section -css
@@ -439,19 +446,19 @@ html {
     margin: 1rem;
     padding-bottom: 2rem;
 
-    
-    .heading{
+
+    .heading {
 
         text-align: center;
         margin-bottom: 0.5rem;
         margin-top: 1rem;
         //background-color: #4D45CB;
-    
+
         span {
             @include paraText(2.5rem);
 
         }
-    
+
         h1 {
             @include titleText(4rem);
             padding-top: 0.5rem;
@@ -460,12 +467,13 @@ html {
     }
 
 
-    .services-slider{
-        
+    .services-slider {
+
         padding-bottom: 2rem;
     }
+
     .slide {
-      // background-color: #F1C40F;
+        // background-color: #F1C40F;
         display: flex;
         width: 100%;
         align-items: center;
@@ -485,30 +493,30 @@ html {
             background: linear-gradient(50deg, var(--white), transparent);
         }
 
-       .image{
-        flex: 1 1 50rem;
-        
-        img{
-            // background-color: #4D45CB;
-             width: 100%;
-             height: 100%;
-             
-            // border: $border;
-             
-         }
-       }
+        .image {
+            flex: 1 1 50rem;
+
+            img {
+                // background-color: #4D45CB;
+                width: 100%;
+                height: 100%;
+
+                // border: $border;
+
+            }
+        }
 
         .content {
-           // background-color: #67f295;
+            // background-color: #67f295;
             width: 100%;
             position: relative;
             align-items: center;
-            padding:1rem;
-            margin:1rem;
+            padding: 1rem;
+            margin: 1rem;
             flex: 1 1 50rem;
             border: $border;
 
-           
+
 
             h3 {
                 @include titleText(2rem);
@@ -536,7 +544,7 @@ html {
         font-size: 4rem;
         background-color: $white;
         border: $border;
-        
+
 
         &:hover {
             background: $yellow;
@@ -552,10 +560,10 @@ html {
 
 
     .swiper-button-prev {
-       // background-color: #4D45CB;
+        // background-color: #4D45CB;
         right: 9rem;
     }
-    
+
 }
 
 //End of the services section -css
@@ -604,17 +612,19 @@ html {
 
     }
 }
+
 //End of the aboutus section -css
 
 //start of the feature section -css
 .feature {
-   // background-color: $primarycolorlightblue1;
-   min-height: 60vh;
+    // background-color: $primarycolorlightblue1;
+    min-height: 60vh;
+
     .box-container {
         //background-color: $primarycolorblue;
         margin: 1rem;
     }
-    
+
     .box {
         //background-color: $primarycoloryellow;
         display: flex;
@@ -622,14 +632,15 @@ html {
         padding: 1rem;
         align-items: center;
         gap: 1rem;
-       
+
         margin: 1rem 0;
         border: $border;
-        &:nth-child(even){
+
+        &:nth-child(even) {
             flex-flow: row-reverse wrap;
         }
 
-        &:last-child{
+        &:last-child {
             margin-bottom: 0;
         }
 
@@ -650,7 +661,7 @@ html {
 
             h3 {
                 @include titleText(3rem);
-               // font-size: 3rem;
+                // font-size: 3rem;
                 line-height: 3.5rem;
 
             }
@@ -658,7 +669,7 @@ html {
 
             li {
                 @include paraText(2.5rem);
-               // font-size: 2.5rem;
+                // font-size: 2.5rem;
                 line-height: 3.5rem;
             }
 
@@ -670,24 +681,139 @@ html {
 }
 
 //End of the feature section -css
+//Start of the Product section
+.products {
+    background-color: $primarycolorblue;
+    align-items: center;
+    height: 80vh;
+    margin: 1rem 1rem;
+   
 
+    img{
+        
+        width: 50%;
+        height: 50%;
+        padding: 1rem;
+        background-color: #eee
+       
+    }
+
+    h1{
+        @include titleText(4rem);
+        text-decoration: underline;
+
+    }
+
+    p{
+        @include graphText(2rem);
+    }
+
+    .slider{
+        align-items: center;
+        background-color: #F1C40F;
+        position: relative;
+        
+        
+
+        .slide{
+            position: absolute;
+            background-color: #000;
+            border: $border;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 7rem;
+            border: $border;
+           // clip-path: circle(0% at 0 50%);
+
+            .active{
+                clip-path: circle(110% at 0 50%);
+            }
+            
+            .productimage{
+              
+              flex: 1 1 50rem;  
+            }
+
+            .productdescription{
+                background-color: rgba(223, 242, 237, 0.8);
+                flex: 1 1 50rem;
+                padding: 2rem; 
+                border-radius: 0 5%;
+               
+                
+            }
+        }
+
+    }
+    
+    
+    .navigation{
+        display: flex;
+        height: 50%;
+        align-items: center;
+        padding: 1rem;
+        justify-content: space-between;
+        
+        i{
+            @include iconBox();
+            border-radius: 10%;
+        }
+
+        .prev-btn,.next-btn{
+            z-index: 999;
+            font-size: 4rem;
+        }
+    }
+
+    .navigation-visibility{
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        height: 90%;
+
+        .slide-icon{
+            z-index: 999;
+            background-color: #eee;
+            width: 2rem;
+            height: 1rem;
+            margin-right: 2rem;
+            border-radius: 20%;
+            transform: translateY(-2rem);
+        }
+    }
+
+
+
+    
+
+    
+    
+
+}
+
+//End of the Product section
 
 //Start of the reviews section-css
 .reviews {
     min-height: 40vh;
     background-color: $primarycolorlightblue;
     padding: 2rem;
+    
 
     .slide {
         border: $border;
         padding: 2rem;
+
         p {
             @include graphText(2.0rem);
             padding: 1.5rem;
             position: relative;
             margin-bottom: 2.0rem;
             background: var(--light-bg);
-            
+
 
             &::before {
                 content: '';
@@ -735,42 +861,45 @@ html {
     }
 
 }
+
 //End of the reviews section-css
 
 //start of the footer section
-.footer{
+.footer {
     padding: 1rem;
     text-align: center;
-    
-   
 
-    .links .button{
+
+
+    .links .button {
         margin: 0.5rem;
     }
 
-    .credit{
+    .credit {
 
         @include titleText(2rem);
-        span{
-            a{
-            color: $primarycoloryellow;
-            font-weight: bold;
 
-            &:hover{
+        span {
+            a {
+                color: $primarycoloryellow;
+                font-weight: bold;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+
+            i {
                 color: $black;
             }
-            }
 
-            i{
-                color: $black;
-            }
 
-            
         }
 
-       
+
     }
 }
+
 //End of the footer section
 
 
@@ -813,7 +942,7 @@ html {
         display: flex;
         font-size: 60%;
 
-    
+
     }
 }
 
@@ -862,7 +991,7 @@ html {
 
     .header {
         padding: 1rem;
-        
+
 
         .navbar a {
             font-size: 1.5rem;
@@ -878,7 +1007,7 @@ html {
     .header {
         padding: 0.5rem;
 
-        .button{
+        .button {
             font-size: 1.75rem;
             padding: 1rem 2rem;
         }
@@ -894,7 +1023,7 @@ html {
         padding: 0.5rem;
 
         #menu-btn {
-            
+
             display: inline-block;
             transition: 0.2s linear;
 
@@ -945,10 +1074,10 @@ html {
 
 //Mobile phone L size
 @media (max-width:425px) {
-    
+
 
     .header {
-        
+
         min-height: 10vh;
         padding: 1rem;
 
@@ -958,76 +1087,79 @@ html {
 
             i {
                 font-size: 0.5rem;
-    
+
             }
-            .fa-cogs{
+
+            .fa-cogs {
                 display: none;
             }
         }
-        
-        .icons{
-            
+
+        .icons {
+
             display: inline;
         }
 
     }
-    
-    .services{
+
+    .services {
         padding-bottom: 1rem;
         min-height: 60vh;
-        .heading{
+
+        .heading {
             text-align: center;
             margin-bottom: 1.0rem;
-        
+
             span {
                 font-size: 3.0rem;
             }
-        
+
             h1 {
                 font-size: 3.5rem;
                 padding-top: 0.5rem;
-            } 
+            }
         }
 
         .swiper-button-next,
         .swiper-button-prev {
-        top: initial;
-        left: initial;
-        bottom: 1rem;
-        right: 1rem;
-        height: 5rem;
-        width: 5rem;
-        line-height: 5rem;
-        font-size: 3rem;
-        background-color: $white;
-         border: $border;
-        
+            top: initial;
+            left: initial;
+            bottom: 1rem;
+            right: 1rem;
+            height: 5rem;
+            width: 5rem;
+            line-height: 5rem;
+            font-size: 3rem;
+            background-color: $white;
+            border: $border;
 
-        &:hover {
-            background: $yellow;
+
+            &:hover {
+                background: $yellow;
+            }
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+
+            font-size: 3rem;
+            color: $black;
+        }
+
+
+        .swiper-button-prev {
+            // background-color: #4D45CB;
+            right: 6rem;
         }
     }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-
-        font-size: 3rem;
-        color: $black;
-    }
-
-
-    .swiper-button-prev {
-       // background-color: #4D45CB;
-        right: 6rem;
-    }
-    } 
 
     section {
         padding: 0.5rem 0.5rem;
     }
 
-    .footer{
+    .footer {
         font-size: 1rem;
+
     }
 }
 

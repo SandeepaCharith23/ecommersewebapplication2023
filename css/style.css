@@ -228,9 +228,12 @@ html::-webkit-scrollbar-thumb {
   color: #ffffff;
 }
 .header .login-form .login-heading .close-button i {
-  font-size: 2rem; /* Set the font size for the close icon */
-  color: #ffffff; /* Set the color of the close icon */
-  padding: 5px; /* Add some padding for the icon */
+  font-size: 2rem;
+  /* Set the font size for the close icon */
+  color: #ffffff;
+  /* Set the color of the close icon */
+  padding: 5px;
+  /* Add some padding for the icon */
 }
 .header .login-form .textfield-box {
   width: 100%;
@@ -486,6 +489,103 @@ html::-webkit-scrollbar-thumb {
   color: #000;
   text-transform: capitalize;
   line-height: 3.5rem;
+}
+
+.products {
+  background-color: #4D45CB;
+  align-items: center;
+  height: 80vh;
+  margin: 1rem 1rem;
+}
+.products img {
+  width: 50%;
+  height: 50%;
+  padding: 1rem;
+  background-color: #eee;
+}
+.products h1 {
+  font-size: 4rem;
+  color: #000;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+.products p {
+  font-size: 2rem;
+  color: #000;
+  line-height: 1.5;
+}
+.products .slider {
+  align-items: center;
+  background-color: #F1C40F;
+  position: relative;
+}
+.products .slider .slide {
+  position: absolute;
+  background-color: #000;
+  border: 0.2rem solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 7rem;
+  border: 0.2rem solid #000;
+}
+.products .slider .slide .active {
+  -webkit-clip-path: circle(110% at 0 50%);
+          clip-path: circle(110% at 0 50%);
+}
+.products .slider .slide .productimage {
+  flex: 1 1 50rem;
+}
+.products .slider .slide .productdescription {
+  background-color: rgba(223, 242, 237, 0.8);
+  flex: 1 1 50rem;
+  padding: 2rem;
+  border-radius: 0 5%;
+}
+.products .navigation {
+  display: flex;
+  height: 50%;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.products .navigation i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: #eee;
+  color: #ffffff;
+  border: 0.2rem solid #000;
+  cursor: pointer;
+  text-align: center;
+  background: #4D45CB;
+  border-radius: 10%;
+}
+.products .navigation i:hover {
+  background: #f3b90b;
+  color: #ffffff;
+}
+.products .navigation .prev-btn, .products .navigation .next-btn {
+  z-index: 999;
+  font-size: 4rem;
+}
+.products .navigation-visibility {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  height: 90%;
+}
+.products .navigation-visibility .slide-icon {
+  z-index: 999;
+  background-color: #eee;
+  width: 2rem;
+  height: 1rem;
+  margin-right: 2rem;
+  border-radius: 20%;
+  transform: translateY(-2rem);
 }
 
 .reviews {
