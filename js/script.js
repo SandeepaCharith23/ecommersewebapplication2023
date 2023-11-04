@@ -7,25 +7,48 @@ let loginformcloseButton=document.querySelector('.header .login-form #close-butt
 
 let productBnnerNextbtn=document.querySelector('.products .navigation .next-btn');
 let productBnnerPrevbtn=document.querySelector('.products .navigation .prev-btn');
-let productBnnerSlides=document.querySelectorAll('.slide');
+let productBnnerSlides=document.querySelectorAll('.productslide');
 let productBnnerslideIcons=document.querySelectorAll('.slide-icon');
 let productBnnernumberslideIcons=productBnnerSlides.length;
-var slideNumber=0;
 
-productBnnerNextbtn.onclick=()=>{
-    productBnnerSlides.forEach((slide)=>{slide.classList.remove("active")});
-    productBnnerslideIcons.forEach((slideIcon)=>{slideIcon.classList.remove("active")});
-    slideNumber++;
 
-    if(slideNumber >(productBnnernumberslideIcons-1)){
-        slideNumber=0;
+
+//Product Slide show JS Automatic slide show
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("productslide");
+
+    if (n > slides.length) {
+        slideIndex = 1;
     }
 
-    productBnnerSlides[slideNumber].classList.add("active");
-    productBnnernumberslideIcons[slideNumber].classList.add("active");
-};
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "flex";
+    slides[slideIndex - 1].classList.add('active');
+}
+
+setInterval(function() {
+    plusSlides(1);
+}, 5000); // Auto-advance every 2 seconds
+
+
 
 menubutton.onclick=()=>{
+    console.log("onclick");
     menubutton.classList.toggle('fa-times');
     navbar.classList.toggle('active-navbar');
     searchForm.classList.remove('active');
@@ -66,3 +89,6 @@ menubutton.onscroll=()=>{
     menubutton.classList.remove('fa-times');
     navbar.classList.remove('active-navbar');
 }
+
+
+

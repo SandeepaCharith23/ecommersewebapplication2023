@@ -27,8 +27,12 @@ html::-webkit-scrollbar-thumb {
 }
 
 .heading {
-  text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: #000;
+  text-transform: capitalize;
+  padding-left: 1rem;
+  border-left: 1rem solid #F1C40F;
 }
 .heading span {
   font-size: 2.5rem;
@@ -45,7 +49,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 2rem;
   color: #ffffff;
   background: #4D45CB;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   border-radius: 0%;
   cursor: pointer;
 }
@@ -69,6 +73,11 @@ html::-webkit-scrollbar-thumb {
   z-index: -1;
   -webkit-clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
           clip-path: polygon(12% 24%, 0% 100%, 98% 50%);
+}
+
+section {
+  margin-bottom: 5rem;
+  padding: 2rem 2%;
 }
 
 @keyframes floating {
@@ -121,7 +130,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 2rem;
   background: #eee;
   color: #ffffff;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   cursor: pointer;
   text-align: center;
   background: #4D45CB;
@@ -162,7 +171,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 2rem;
   background: #eee;
   color: #ffffff;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   cursor: pointer;
   text-align: center;
   background: #4D45CB;
@@ -192,7 +201,7 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
   animation: fadeIn 0.2s linear;
   display: none;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
 }
 .header .login-form.active {
   display: block;
@@ -214,7 +223,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 2rem;
   background: #eee;
   color: #ffffff;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   cursor: pointer;
   text-align: center;
   background: #4D45CB;
@@ -367,7 +376,7 @@ html::-webkit-scrollbar-thumb {
   padding: 1rem;
   margin: 1rem;
   flex: 1 1 50rem;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
 }
 .services .slide .content h3 {
   font-size: 2rem;
@@ -394,7 +403,7 @@ html::-webkit-scrollbar-thumb {
   line-height: 7rem;
   font-size: 4rem;
   background-color: #ffffff;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
 }
 .services .swiper-button-next:hover,
 .services .swiper-button-prev:hover {
@@ -411,7 +420,7 @@ html::-webkit-scrollbar-thumb {
 
 .aboutus {
   background: #7067f2;
-  min-height: 90vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -425,7 +434,7 @@ html::-webkit-scrollbar-thumb {
   height: 50rem;
 }
 .aboutus .content {
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
   padding: 1rem 2rem;
   margin: 1rem;
@@ -459,7 +468,7 @@ html::-webkit-scrollbar-thumb {
   align-items: center;
   gap: 1rem;
   margin: 1rem 0;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
 }
 .feature .box:nth-child(even) {
   flex-flow: row-reverse wrap;
@@ -492,16 +501,16 @@ html::-webkit-scrollbar-thumb {
 }
 
 .products {
-  background-color: #4D45CB;
+  background-color: #ffffff;
   align-items: center;
-  height: 80vh;
-  margin: 1rem 1rem;
+  min-height: 85vh;
+  padding: 1rem 1rem;
 }
 .products img {
-  width: 50%;
-  height: 50%;
-  padding: 1rem;
-  background-color: #eee;
+  width: 50rem;
+  height: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .products h1 {
   font-size: 4rem;
@@ -513,79 +522,74 @@ html::-webkit-scrollbar-thumb {
   font-size: 2rem;
   color: #000;
   line-height: 1.5;
+  line-height: 3.5rem;
+  padding-bottom: 5rem;
 }
-.products .slider {
+.products .productslider {
   align-items: center;
-  background-color: #F1C40F;
   position: relative;
 }
-.products .slider .slide {
+.products .productslider .productslide {
   position: absolute;
-  background-color: #000;
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  align-items: center;
   justify-content: space-between;
-  margin: 1rem 7rem;
-  border: 0.2rem solid #000;
+  margin: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.products .slider .slide .active {
+.products .productslider .productslide .active {
   -webkit-clip-path: circle(110% at 0 50%);
           clip-path: circle(110% at 0 50%);
 }
-.products .slider .slide .productimage {
-  flex: 1 1 50rem;
-}
-.products .slider .slide .productdescription {
-  background-color: rgba(223, 242, 237, 0.8);
-  flex: 1 1 50rem;
+.products .productslider .productslide .productimage {
+  flex: 1 1 30vw;
   padding: 2rem;
+}
+.products .productslider .productslide .productdescription {
+  flex: 1 1 50vw;
+  padding: 2rem 3rem;
   border-radius: 0 5%;
 }
-.products .navigation {
+
+.contact {
+  background: #c7c3f9;
+}
+.contact .heading {
+  color: var(--white);
+  font-size: 3rem;
+  color: #000;
+  text-transform: capitalize;
+}
+.contact .row {
   display: flex;
-  height: 50%;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact .row .map {
+  flex: 1 1 41rem;
+  width: 100%;
+}
+.contact .row form {
+  flex: 1 1 41rem;
+  background: #ffffff;
+  padding: 3rem;
+}
+.contact .row form .box {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   padding: 1rem;
-  justify-content: space-between;
-}
-.products .navigation i {
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
-  font-size: 2rem;
+  margin: 2rem 1rem;
+  width: 100%;
   background: #eee;
-  color: #ffffff;
-  border: 0.2rem solid #000;
-  cursor: pointer;
-  text-align: center;
-  background: #4D45CB;
-  border-radius: 10%;
+  font-size: 1.5rem;
 }
-.products .navigation i:hover {
-  background: #f3b90b;
-  color: #ffffff;
-}
-.products .navigation .prev-btn, .products .navigation .next-btn {
-  z-index: 999;
-  font-size: 4rem;
-}
-.products .navigation-visibility {
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  height: 90%;
-}
-.products .navigation-visibility .slide-icon {
-  z-index: 999;
-  background-color: #eee;
-  width: 2rem;
-  height: 1rem;
-  margin-right: 2rem;
-  border-radius: 20%;
-  transform: translateY(-2rem);
+.contact .row form h3 {
+  font-size: 2rem;
+  color: #000;
+  text-transform: capitalize;
 }
 
 .reviews {
@@ -594,7 +598,7 @@ html::-webkit-scrollbar-thumb {
   padding: 2rem;
 }
 .reviews .slide {
-  border: 0.2rem solid #000;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
   padding: 2rem;
 }
 .reviews .slide p {
@@ -714,6 +718,9 @@ html::-webkit-scrollbar-thumb {
   .header .navbar a {
     font-size: 1.5rem;
   }
+  .products {
+    min-height: 60vh;
+  }
 }
 @media (max-width: 968px) {
   html {
@@ -746,7 +753,7 @@ html::-webkit-scrollbar-thumb {
     top: 99%;
     left: 0;
     right: 0;
-    border-top: 0.2rem solid #000;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
     background: #ffffff;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -769,6 +776,19 @@ html::-webkit-scrollbar-thumb {
   }
   section {
     padding: 2rem 2rem;
+  }
+  .products {
+    min-height: 90vh;
+  }
+  .products img {
+    height: 40rem;
+    width: 40rem;
+  }
+  .products .productslider .productslide .productimage {
+    flex: 1 1 10vw;
+  }
+  .products .productslider .productslide .productdescription {
+    flex: 1 1 40vw;
   }
 }
 @media (max-width: 425px) {
@@ -815,7 +835,7 @@ html::-webkit-scrollbar-thumb {
     line-height: 5rem;
     font-size: 3rem;
     background-color: #ffffff;
-    border: 0.2rem solid #000;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
   }
   .services .swiper-button-next:hover,
   .services .swiper-button-prev:hover {
@@ -834,6 +854,28 @@ html::-webkit-scrollbar-thumb {
   }
   .footer {
     font-size: 1rem;
+  }
+  .products {
+    min-height: 80vh;
+  }
+  .products h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    padding-bottom: 2rem;
+  }
+  .products p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .products img {
+    height: 30rem;
+    width: 30rem;
+  }
+  .products .productslider .productslide .productimage {
+    flex: 1 1 20vw;
+  }
+  .products .productslider .productslide .productdescription {
+    flex: 1 1 30vw;
   }
 }
 @media (max-width: 320px) {

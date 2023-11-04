@@ -20,7 +20,7 @@ $primarycolorlightblue1: #c7c3f9;
 $primarycolorlightgreen:#36eaba;
 $yellow: #F1C40F;
 $primarycoloryellow: #f3b90b;
-$border: 0.2rem solid $black;
+$border: .1rem solid rgba(0, 0, 0, .3);
 $light-color: #666;
 $light-bg: #eee;
 $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -114,8 +114,11 @@ html {
 }
 
 .heading {
-    text-align: center;
-    margin-bottom: 2rem;
+    
+    margin-bottom: 3rem;
+    @include titleText(3rem);
+    padding-left: 1rem;
+    border-left: 1rem solid $yellow;
 
     span {
         font-size: 2.5rem;
@@ -162,11 +165,10 @@ html {
     }
 }
 
-// section {
-//     //padding: 1rem ;
-//    border: $border;
-//    border-radius: 2%;
-// }
+section {
+   margin-bottom: 5rem ;
+   padding: 2rem 2%;
+}
 
 @keyframes floating {
 
@@ -571,7 +573,7 @@ html {
 //start of the aboutus section -css
 .aboutus {
     background: $primarycolorlightblue;
-    min-height: 90vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -683,66 +685,78 @@ html {
 //End of the feature section -css
 //Start of the Product section
 .products {
-    background-color: $primarycolorblue;
+    background-color: $white;
     align-items: center;
-    height: 80vh;
-    margin: 1rem 1rem;
-   
+    min-height: 85vh;
+    padding: 1rem 1rem;
+    
+
 
     img{
         
-        width: 50%;
-        height: 50%;
-        padding: 1rem;
-        background-color: #eee
+        width:50rem ; 
+        height: 50rem;
+        object-fit: cover;
+        
        
     }
 
     h1{
         @include titleText(4rem);
         text-decoration: underline;
+       
 
     }
 
     p{
         @include graphText(2rem);
+        line-height: 3.5rem;
+        padding-bottom: 5rem;
+        
+       
     }
 
-    .slider{
+    .productslider{
         align-items: center;
-        background-color: #F1C40F;
+        //background-color: #F1C40F;
         position: relative;
-        
-        
+       
 
-        .slide{
+
+        .productslide{
             position: absolute;
-            background-color: #000;
+           // background-color: palegreen;
             border: $border;
             display: flex;
             flex-wrap: wrap;
             padding: 1rem;
-            align-items: center;
             justify-content: space-between;
-            margin: 1rem 7rem;
-            border: $border;
-           // clip-path: circle(0% at 0 50%);
+            margin: 1rem ;
+           //border: $border;
+            border-radius: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          
+          // clip-path: circle(100% at 0 100%);
+           //clip-path: inset(0 40% 0 0);
 
             .active{
                 clip-path: circle(110% at 0 50%);
+                //clip-path: inset(0 0 0 0);
             }
             
             .productimage{
-              
-              flex: 1 1 50rem;  
+             // background-color: #4D45CB;
+              flex: 1 1 30vw; 
+              padding: 2rem;
+             
             }
 
             .productdescription{
-                background-color: rgba(223, 242, 237, 0.8);
-                flex: 1 1 50rem;
-                padding: 2rem; 
+               // background-color: rgba(223, 242, 237, 0.8);
+                flex: 1 1 50vw;
+                padding: 2rem 3rem; 
                 border-radius: 0 5%;
-               
+                
                 
             }
         }
@@ -750,40 +764,45 @@ html {
     }
     
     
-    .navigation{
-        display: flex;
-        height: 50%;
-        align-items: center;
-        padding: 1rem;
-        justify-content: space-between;
+    // .navigation{
+      
+    //     display: flex;
+    //     height: 80%;
+    //     align-items: center;
+    //     padding: 1rem;
+    //     justify-content: space-between;
         
-        i{
-            @include iconBox();
-            border-radius: 10%;
-        }
+    //     i{
+    //         @include iconBox();
+    //         border-radius: 10%;
+    //     }
 
-        .prev-btn,.next-btn{
-            z-index: 999;
-            font-size: 4rem;
-        }
-    }
+    //     .prev-btn,.next-btn{
+    //         z-index: 2;
+    //         font-size: 4rem;
+    //     }
+    // }
 
-    .navigation-visibility{
-        z-index: 999;
-        display: flex;
-        justify-content: center;
-        height: 90%;
+    // .navigation-visibility{
+    //     z-index: 999;
+    //     display: flex;
+    //     justify-content: center;
+    //     height: 90%;
 
-        .slide-icon{
-            z-index: 999;
-            background-color: #eee;
-            width: 2rem;
-            height: 1rem;
-            margin-right: 2rem;
-            border-radius: 20%;
-            transform: translateY(-2rem);
-        }
-    }
+    //     .slide-icon{
+    //         z-index: 999;
+    //         background-color: #eee;
+    //         width: 2rem;
+    //         height: 1rem;
+    //         margin-right: 2rem;
+    //         border-radius: 20%;
+    //         transform: translateY(-2rem);
+
+    //         .active{
+    //             background-color: #000;
+    //         }
+    //     }
+    // }
 
 
 
@@ -795,6 +814,96 @@ html {
 }
 
 //End of the Product section
+
+// .productsA{
+//     .slideshow-container {
+//         position: relative;
+//         max-width: 100%;
+//         margin: 0 auto;
+//     }
+    
+//     .mySlides {
+//         display: none;
+
+//         .image{
+//             display: 1 1 40rem;
+//         };
+//         .content{
+
+//             display: 1 1 40rem;
+//         }
+//     }
+    
+//     img {
+//         width: 100%;
+//     }
+    
+//     .prev, .next {
+//         position: absolute;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         padding: 10px;
+//         background-color: #333;
+//         color: #fff;
+//         cursor: pointer;
+//         text-decoration: none;
+//         font-size: 20px;
+//     }
+    
+//     .prev {
+//         left: 0;
+//     }
+    
+//     .next {
+//         right: 0;
+//     }
+      
+// }
+
+//start of contact us section-07
+.contact {
+    background: $primarycolorlightblue1;
+
+    .heading {
+        color: var(--white);
+        @include titleText(3rem);
+    }
+
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .map {
+            flex: 1 1 41rem;
+            width: 100%;
+        }
+
+        form {
+            flex: 1 1 41rem;
+            background: $white;
+            padding: 3rem;
+
+            .box {
+                box-shadow: $box-shadow;
+                border: $border;
+                padding: 1rem;
+                margin:2rem 1rem;
+                width: 100%;
+                background: $light-bg;
+                font-size: 1.5rem;
+                
+
+            }
+
+            h3 {
+                @include titleText(2rem);
+            }
+        }
+    }
+}
+//End of contact us section-07
 
 //Start of the reviews section-css
 .reviews {
@@ -997,6 +1106,10 @@ html {
             font-size: 1.5rem;
         }
     }
+
+    .products{
+        min-height: 60vh;  
+    }
 }
 
 @media (max-width:968px) {
@@ -1068,13 +1181,35 @@ html {
         padding: 2rem 2rem;
     }
 
+    .products{
+        min-height: 90vh;
+        
+        img{
+            height: 40rem;
+            width: 40rem;
+        }
+
+        .productslider{
+            .productslide{
+                .productimage{
+                    flex: 1 1 10vw;
+                }
+
+                .productdescription{
+                    flex: 1 1 40vw;
+                }
+            }
+        }
+
+    }
+
 
 }
 
 
 //Mobile phone L size
 @media (max-width:425px) {
-
+    
 
     .header {
 
@@ -1161,6 +1296,40 @@ html {
         font-size: 1rem;
 
     }
+    
+    .products{
+        min-height: 80vh;
+        h1{
+          font-size: 3rem;
+          line-height: 4rem;
+          padding-bottom: 2rem;  
+        }
+
+        p{
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+       
+        
+        img{
+            height: 30rem;
+            width: 30rem;
+        }
+
+        .productslider{
+            .productslide{
+                .productimage{
+                    flex: 1 1 20vw;
+                }
+
+                .productdescription{
+                    flex: 1 1 30vw;
+                }
+            }
+        }
+        
+    }
+   
 }
 
 @media (max-width:375px) {}
