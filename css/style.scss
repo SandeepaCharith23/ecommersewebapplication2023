@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,900;1,100;1,200;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Artifika&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,900;1,100;1,200;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap&family=Artifika&family=Italianno&family=Kenia&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,900;1,100;1,200;1,400;1,700;1,900&family=Roboto+Slab:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
 
 * {
     font-family: 'Roboto', sans-serif;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +21,8 @@ $primarycolorlightblue1: #c7c3f9;
 $primarycolorlightgreen: #36eaba;
 $yellow: #F1C40F;
 $primarycoloryellow: #f3b90b;
-$border: .1rem solid rgba(0, 0, 0, .3);
+$border: .1rem solid #0000004d;
+$borderwhite: .1rem solid #fff;
 $light-color: #666;
 $light-bg: #eee;
 $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -77,7 +79,7 @@ $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     width: 3rem;
     line-height: 3rem;
     font-size: 2rem;
-    
+
     color: $white;
     border: $border;
     cursor: pointer;
@@ -91,7 +93,27 @@ $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     }
 }
 
-@mixin smalliconBox2(){
+@mixin smalliconBox1() {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    padding: 1rem;
+    color: $white;
+    border: $border;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    background: $primarycolorblue;
+
+
+    &:hover {
+        background: $primarycoloryellow;
+        color: $white;
+    }
+}
+
+@mixin smalliconBox2() {
     height: 3rem;
     width: 3rem;
     line-height: 3rem;
@@ -106,7 +128,7 @@ $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
         color: $white;
     }
 
-    
+
 }
 
 
@@ -1040,6 +1062,7 @@ section {
 
 .productshomesheader {
     min-height: 10vh;
+    width: 100vw;
     position: sticky;
     top: 0;
     left: 0;
@@ -1065,18 +1088,18 @@ section {
 
     }
 
-    .navbar a{
-       
-            margin: 0 1rem;
-            font-size: 2.0rem;
-            color: $black;
+    .navbar a {
+
+        margin: 0 1rem;
+        font-size: 2.0rem;
+        color: $black;
 
 
-            &:hover {
-                text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
 
-            }
-        
+        }
+
 
     }
 
@@ -1090,7 +1113,7 @@ section {
     //start of -Search Form
     .search-form {
         position: absolute;
-        top: 80%;
+        top: 70%;
         left: 50%;
         transform: translateX(-50%);
         width: 80%;
@@ -1126,7 +1149,7 @@ section {
 
             &:hover {
                 background-color: $yellow;
-                
+
             }
 
 
@@ -1141,7 +1164,7 @@ section {
 
 .headerbanner {
     background-image: url("images/shopping_banner_small.jpg");
-    min-height: 30vh;
+    min-height: 40vh;
     background-color: $primarycolorblue;
     width: 100%;
     background-size: cover;
@@ -1168,7 +1191,7 @@ section {
 .products-display-section {
 
     .productsdisplay {
-       // background-color: $primarycolorlightblue1;
+        // background-color: $primarycolorlightblue1;
         text-align: center;
         align-items: center;
         padding: 0 1rem;
@@ -1177,12 +1200,12 @@ section {
             @include titleText(3.5rem);
         }
 
-        p{
+        p {
             @include graphText(2.5rem);
         }
 
         .products-container {
-           //background-color: $primarycoloryellow;
+            //background-color: $primarycoloryellow;
             @include grid(50vw);
             display: flex;
             flex-wrap: wrap;
@@ -1203,8 +1226,8 @@ section {
                 border-radius: 2rem;
                 position: relative;
 
-                
-                
+
+
 
                 img {
                     width: 40vw;
@@ -1212,43 +1235,321 @@ section {
                     box-shadow: $box-shadow;
                     border-radius: 2rem;
 
-                    &:hover{
+                    &:hover {
                         transform: scale(1.015);
                     }
                 }
 
-                .product-description{
+                .product-description {
                     text-align: center;
 
-                    h1{font-size: 2.5rem;}
-                    span{font-size: 1.5rem;}
-                    p{font-size: 1rem;}
+                    h1 {
+                        font-size: 2.5rem;
+                    }
 
-                    .stars{
+                    span {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+
+                    .stars {
                         padding: 1rem;
-                       
-                        i{
+
+                        i {
                             color: $yellow;
                         }
                     }
 
-                    .product-add-to-cart{
+                    .product-add-to-cart {
                         position: absolute;
                         bottom: 5rem;
-                        right:5rem;
-                        i{
+                        right: 5rem;
+
+                        i {
                             font-size: 1rem;
                             @include smalliconBox2();
                             color: $white;
                             border-radius: 20%;
-                            
-                            
+
+
                         }
                     }
                 }
             }
         }
     }
+}
+
+.product-display-pagination {
+    min-width: 10vh;
+    background-color: $primarycolorlightblue1;
+    align-items: center;
+    text-align: center;
+
+    a {
+        @include smalliconBox1();
+
+
+    }
+}
+
+.banner {
+    .banner-container {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 1rem 10rem;
+        border: $border;
+        box-shadow: $box-shadow;
+
+        span {
+
+            font-size: 4rem;
+            font-family: 'Italianno', sans-serif;
+        }
+
+        p {
+            color: $white;
+            padding-top: 2.5rem;
+            line-height: 3rem;
+            padding-bottom: 5rem;
+        }
+
+        h1 {
+            font-family: 'Italianno', sans-serif;
+            font-size: 10rem;
+        }
+
+    }
+}
+
+.advertisements-banners-sec {
+
+    .advertisements-banners {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // background-color: #36eaba;
+    }
+
+    .advertisement-banner-container {
+        background-color: $primarycolorblue;
+        border: $border;
+        border-radius: 2rem;
+        margin: 1rem;
+        height: 40vh;
+        width: 45vw;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        h1 {
+            @include titleText(4rem);
+            color: $light-bg;
+        }
+
+        h2 {
+            @include paraText(3.5rem);
+            font-family: 'Italianno', sans-serif;
+            color: $light-bg;
+        }
+
+        span {
+            @include paraText(2.5rem);
+            font-family: 'Italianno', sans-serif;
+            color: $light-bg;
+
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin-right: 2rem;
+            font-size: 2rem;
+            color: $white;
+            background: transparent;
+            border: $borderwhite;
+            border-radius: 10rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primarycoloryellow;
+            }
+        }
+
+    }
+
+
+
+}
+
+
+.newsubscription-section {
+
+    min-height: 10vh;
+
+    background: linear-gradient(to right, $primarycolorlightblue, green);
+
+
+    border: $border;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .newsubscription-content {
+        h1 {
+            @include titleText(3rem);
+        }
+
+        span {
+            color: $primarycoloryellow;
+
+        }
+
+
+    }
+
+    .newsubscription-form {
+        width: 50vw;
+
+        .button {
+            border: $borderwhite;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $primarycoloryellow;
+            }
+        }
+
+    }
+
+    .textfield-box {
+        width: 70%;
+        padding: 1.2rem 1.4rem;
+        background: $light-bg;
+        font-size: 1.6rem;
+        color: $light-color;
+        margin: .5rem 0;
+    }
+}
+
+
+.products-home-footer {
+    .footer {
+        background-color: #36eaba;
+        min-height: 10vh;
+
+        border: $border;
+    }
+}
+
+.productshomefooter {
+    
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 5rem;
+    }
+   .footer-information{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 1rem;
+   
+
+    h2 {
+        @include titleText(1.5rem);
+        color: $black;
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration: underline;
+    }
+
+    p{
+        @include graphText(1rem);
+    }
+
+
+    .footer-column01 {
+        flex: 1 1 20vw;
+       // background-color: #4D45CB;
+        .contact-details-column {
+            padding: 1rem;
+            border: $border;
+            box-shadow: $box-shadow;
+            margin-bottom: 1rem;
+
+            
+        }
+
+        .social-media-column {
+            display: flex;
+            padding: 1rem;
+            border: $border;
+            box-shadow: $box-shadow;
+            i {
+                height: 2rem;
+                width: 2rem;
+                margin-right: 2rem;
+                //color: $white;
+
+                &:hover {
+                    color: $primarycoloryellow;
+                }
+            }
+        }
+    }
+
+    .footer-column02{
+        flex: 1 1 20vw;
+        //background-color: #c7c5e8;
+    
+    }
+
+    .footer-column03{
+        flex: 1 1 20vw;
+       // background-color: #666;
+    }
+
+    .footer-column04{
+        flex: 1 1 15vw;
+       // background-color: #36eaba;
+    }
+
+    .footer-column05{
+        flex: 1 1 100vw;
+        padding-top: 2rem;
+       // background-color:#F1C40F;
+    }
+   }
+    
+   .copy-rights-row{
+    text-align: center;
+    align-items: center;
+    padding-bottom: 2rem;
+   }
+
+
+
 }
 
 
@@ -1356,7 +1657,7 @@ section {
     }
 }
 
-@media (max-width:1200px) {
+@media (max-width:1201px) {
 
     html {
         font-size: 55.5%;
@@ -1367,7 +1668,7 @@ section {
     }
 }
 
-@media (max-width:1024px) {
+@media (max-width:1025px) {
     html {
         font-size: 50.5%;
     }
@@ -1403,9 +1704,20 @@ section {
     .products {
         min-height: 40vh;
     }
+
+    .productshomefooter{
+        .footer-information{
+          
+
+            .footer-column05{
+                flex: 1 1 100vw;
+                background-color: #F1C40F;
+            }
+        }
+    }
 }
 
-@media (max-width:968px) {
+@media (max-width:969px) {
     html {
         font-size: 50.0%;
     }
@@ -1420,7 +1732,7 @@ section {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:769px) {
     html {
         font-size: 50.0%;
     }
@@ -1474,6 +1786,82 @@ section {
         padding: 2rem 2rem;
     }
 
+    .productshomesheader {
+        min-height: 5vh;
+        padding: 3rem 3rem;
+    
+        .logo {
+           
+            font-size: 1.5rem;
+    
+            i {
+                display: none;
+                font-size: 1.5rem;
+    
+            }
+    
+        }
+    
+        .navbar a {
+    
+            margin: 0 1rem;
+            font-size: 2.0rem;
+        
+
+    
+        }
+    
+    
+    
+        .icons div {
+            display: none;
+            @include iconBox();
+            margin-left: 0.6rem;
+        }
+    
+        //start of -Search Form
+        .search-form {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            background: $white;
+            box-shadow: $box-shadow;
+            padding: 1rem;
+           
+    
+            &.active {
+                display: flex;
+            }
+    
+            input {
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                font-size: 1.6rem;
+                
+            }
+    
+            i {
+                @include smalliconBox();
+            }
+    
+            lable {
+    
+                font-size: 1rem;
+                margin: 0 3rem;
+    
+        
+    
+            }
+        }
+    
+        //End of -Search Form
+    
+    
+    
+    }
+
     .products {
         min-height: 50vh;
 
@@ -1496,42 +1884,67 @@ section {
 
     }
 
-    .products-display-section{
-        .productsdisplay{
-         
-         .products-container{
-             @include grid(80vw);
-             .product{
-                 min-width: 90vw;
+    .products-display-section {
+        .productsdisplay {
 
-                 img{
-                    width: 80vw;
-                    height: 40vh;
-                 }
+            .products-container {
+                @include grid(80vw);
 
-                 .product-description{
-                    h1{
-                        font-size: 4rem;
+                .product {
+                    min-width: 90vw;
+
+                    img {
+                        width: 80vw;
+                        height: 40vh;
                     }
-                    span{
-                        font-size: 3.5rem;
+
+                    .product-description {
+                        h1 {
+                            font-size: 4rem;
+                        }
+
+                        span {
+                            font-size: 3.5rem;
+                        }
+
+                        h2 {
+                            font-size: 3.5rem;
+                        }
                     }
-                    h2{
-                        font-size: 3.5rem;
-                    }
-                 }
-             }
-         }
-         
-        } 
-     }
+                }
+            }
+
+        }
+    }
+
+    .advertisements-banners-sec{
+        .advertisements-banners{
+            .advertisement-banner-container{
+                width: 45vw;
+
+                h1{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .newsubscription-section {
+        .newsubscription-form{
+            width: 90vw;
+
+            .textfield-box{
+                width: 90%;
+            }
+        }
+    }
 
 
 }
 
 
 //Mobile phone L size
-@media (max-width:425px) {
+@media (max-width:426px) {
 
 
     .header {
@@ -1690,8 +2103,145 @@ section {
         }
 
     }
+
+    .productshomesheader {
+        min-height: 5vh;
+        padding: 3rem 3rem;
+    
+        .logo {
+           
+            font-size: 1.0rem;
+    
+            i {
+                display: none;
+                font-size: 1.0rem;
+    
+            }
+    
+        }
+    
+        .navbar a {
+    
+            margin: 0 1rem;
+            font-size: 1.5rem;
+        
+
+    
+        }
     
     
+    
+        .icons div {
+            display: none;
+            @include iconBox();
+            margin-left: 0.6rem;
+        }
+    
+        //start of -Search Form
+        .search-form {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            background: $white;
+            box-shadow: $box-shadow;
+            padding: 1rem;
+           
+    
+            &.active {
+                display: flex;
+            }
+    
+            input {
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                font-size: 1.6rem;
+                
+            }
+    
+            i {
+                @include smalliconBox();
+            }
+    
+            lable {
+    
+                font-size: 1rem;
+                margin: 0 3rem;
+    
+        
+    
+            }
+        }
+    
+        //End of -Search Form
+    
+    
+    
+    }
+
+
+    .products-display-section {
+        .productsdisplay {
+
+            .products-container {
+                @include grid(80vw);
+
+                .product {
+                    min-width: 90vw;
+
+                    img {
+                        width: 70vw;
+                        height: 25vh;
+                    }
+
+                    .product-description {
+                        h1 {
+                            font-size: 4rem;
+                        }
+
+                        span {
+                            font-size: 3.5rem;
+                        }
+
+                        h2 {
+                            font-size: 3.5rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .advertisements-banners-sec{
+        .advertisements-banners{
+            .advertisement-banner-container{
+                width: 100vw;
+
+                h1{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .productshomefooter{
+        .footer-information{
+            .footer-column01,.footer-column02,.footer-column03,.footer-column04{
+                //background-color: #7067f2;
+                flex: 1 1 25vw;
+            } 
+
+            .footer-column05{
+                flex: 1 1 100vw;
+                background-color: #F1C40F;
+            }
+        }
+    }
+
+
+
 
 
 }
