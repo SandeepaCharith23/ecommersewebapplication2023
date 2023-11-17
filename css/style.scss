@@ -18,6 +18,7 @@ $white: #ffffff;
 $primarycolorblue: #4D45CB;
 $primarycolorlightblue: #7067f2;
 $primarycolorlightblue1: #c7c3f9;
+$primarycolorlightblue2: #ecebf8;
 $primarycolorlightgreen: #36eaba;
 $yellow: #F1C40F;
 $primarycoloryellow: #f3b90b;
@@ -1056,7 +1057,7 @@ section {
 
 //End of the footer section
 
-//start of the product home page scss
+//2.start of the product home page scss
 
 
 
@@ -1553,7 +1554,124 @@ section {
 }
 
 
-//End of the product home page scss
+//2.End of the product home page scss
+
+
+//3.Start of the product_details.html page scss
+
+.product-display-section{
+  //background-color: $primarycolorlightblue;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100vw;
+  min-height: 20vh;
+
+  
+
+  .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: start;
+    
+    
+    .product-images-column{
+       // background-color: $white;
+        padding: 1rem;
+        flex: 1 1 45vw;
+
+        .main-image-sec{
+            background-color: $primarycolorlightblue2;
+            .main-image{
+                width: 40vw;
+                height: 70%;
+                
+            }
+        }
+
+       .product-images-row{
+        display: flex;
+        justify-content: space-between;
+        
+        .product-smallimage-col{
+            padding-top: 2rem;
+            .product-images-small{
+                background-color: $primarycolorlightblue2;
+                width: 10vw;
+                border: $border;
+                box-shadow: $box-shadow;
+                flex-basis: 25%;
+                cursor: pointer;
+                height: 95%;
+            }
+        }
+        
+       }
+
+       
+    }
+    .product-details-column{
+        padding: 1.5rem;
+        flex: 1 1 45vw;
+        //background-color: $primarycolorlightblue2;
+        align-items: start;
+        text-align: start;
+
+        h1{
+            padding: 5rem 1rem 5rem 0;
+            @include titleText(2.5rem);
+            //background-color: $primarycolorlightgreen;
+        }
+      
+        h2{
+            @include graphText(1.5rem);
+            padding: 1rem 1rem 1rem 0;
+            //background-color: $yellow;
+        }
+
+        h4{
+            @include graphText(1.5rem);
+            //background-color: $primarycolorlightblue1;
+            
+        }
+
+        p{
+            line-height: 2rem;
+        }
+
+                .select-sizes-section {
+                    display: flex;
+                    gap: 2rem;
+        
+                    select {
+                        border: $border;
+                    }
+                }
+
+        .select-quentity-section{
+            padding-top: 1rem;
+            display: flex;
+           gap: 1rem;
+
+           .button{
+            padding: 1rem 1rem;
+            margin-right: 1rem;
+            font-size: 1.0rem;
+           }
+
+           input{
+            width: 10%;
+            height: 2rem;
+            border: $border;
+            padding-left: 1rem;
+           }
+        }
+    }
+  }
+
+
+}
+//3.End of the the product_details.html page scss
 
 
 
@@ -2239,6 +2357,40 @@ section {
             }
         }
     }
+
+
+    //  3.product_details display section
+    .product-display-section{
+       .product-container{
+          .product-images-column{
+            flex: 1 1 100vw;
+            .main-image-sec{
+               .main-image{
+               height: 100%;
+               } 
+            }
+
+            .product-images-row{
+                .product-smallimage-col{
+                    .product-images-small{
+                            width: 20vw;
+                            border: $border;
+                            box-shadow: $box-shadow;
+                            flex-basis: 2%;
+                            cursor: pointer;
+                            height: 100%;
+                        
+                    }
+                }
+            }
+          }
+          .product-details-column{
+            flex: 1 1 100vw;
+          }
+       } 
+    }
+
+
 
 
 
