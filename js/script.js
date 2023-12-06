@@ -10,8 +10,13 @@ let productBnnerPrevbtn=document.querySelector('.products .navigation .prev-btn'
 let productBnnerSlides=document.querySelectorAll('.productslide');
 let productBnnerslideIcons=document.querySelectorAll('.slide-icon');
 let productBnnernumberslideIcons=productBnnerSlides.length;
+let adminloginbutton=document.getElementById('adminloginbutton');
 
-
+//admin login function
+adminloginbutton.addEventListener('click',function(){
+   window.location.href='F:/Projects/Web Projects/ecommerseApplication2023/maindashboard.html';
+   console.log('inside the button');
+});
 
 //Product Slide show JS Automatic slide show
 let slideIndex = 1;
