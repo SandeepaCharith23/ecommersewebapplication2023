@@ -12,10 +12,12 @@ let productBnnerslideIcons=document.querySelectorAll('.slide-icon');
 let productBnnernumberslideIcons=productBnnerSlides.length;
 let adminloginbutton=document.getElementById('adminloginbutton');
 
-//admin login function
+// //admin login function
 adminloginbutton.addEventListener('click',function(){
-   window.location.href='F:/Projects/Web Projects/ecommerseApplication2023/maindashboard.html';
-   console.log('inside the button');
+   window.location.href='maindashboard.html';
+   alert("Redirect user to main Dashboard");
+   
+   
 });
 
 //Product Slide show JS Automatic slide show

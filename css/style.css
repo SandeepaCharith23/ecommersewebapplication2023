@@ -1187,6 +1187,15 @@ section {
   padding-left: 1rem;
 }
 
+.customnavitem {
+  background-color: #7067f2;
+  margin: 0rem 1rem;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 @media (max-width: 2560px) {
   html {
     font-size: 72.5%;

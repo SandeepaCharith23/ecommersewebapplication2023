@@ -1673,8 +1673,19 @@ section {
 }
 //3.End of the the product_details.html page scss
 
+// 4.Start of the Main dashboard scss 
+.customnavitem{
+    background-color: $primarycolorlightblue;
+    margin: 0rem 1rem;
+    width: 10rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    //border-radius: 2rem;
+}
 
 
+// 4.End of the Main dashboard scss 
 
 
 
@@ -2389,6 +2400,9 @@ section {
           }
        } 
     }
+
+
+
 
 
 
