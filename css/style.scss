@@ -30,7 +30,7 @@ $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 
 
 
-
+//.Basic Scss -Mixin and Colors
 
 @mixin grid($val) {
     display: grid;
@@ -153,6 +153,9 @@ html {
         background: $black;
     }
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//1.Start---Scss -Main Index.html 
 
 .heading {
 
@@ -1057,7 +1060,13 @@ section {
 
 //End of the footer section
 
-//2.start of the product home page scss
+
+
+//1.End---Scss -Main Index.html 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//2.Start---Scss -Products home page 
 
 
 
@@ -1578,8 +1587,9 @@ section {
 }
 
 
-//2.End of the product home page scss
+//2.End---Scss -Products home page 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //3.Start of the product_details.html page scss
 
@@ -1695,23 +1705,68 @@ section {
 
 
 }
-//3.End of the the product_details.html page scss
 
-// 4.Start of the Main dashboard scss 
-.customnavitem{
+
+ //3.End of the product_details.html page scss
+
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 4.Start------ of the Main dashboard scss 
+.custom_navitem{
     background-color: $primarycolorlightblue;
     margin: 0rem 1rem;
     width: 10rem;
     text-align: center;
+    //color: $black;
     font-size: 1.5rem;
     font-weight: bold;
-    //border-radius: 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.custom_searchbar{
+    width: 80vw;
+
+    .custom_searchbutton{
+        background-color: $primarycolorlightblue;
+        color: $black;
+        margin:0 1rem;
+    }
+}
+
+.custom_toggler_button{
+    background-color: $black;
+   
+}
+
+.custom-card-body{
+    width: 10rem;
+    align-items: center;
+}
+
+.admin_banner{
+    width: 100%;
+    
+    align-items: center;
+    background-color: $primarycolorlightblue;
+}
+
+.analyse_section{
+    background-color: $primarycolorlightblue1;
+    width: 100%;
+    height: 100%;
+    box-shadow: $box-shadow;
+    margin-right: 1rem;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
 }
 
 
 
 
-// 4.End of the Main dashboard scss 
 
 
 
@@ -1722,14 +1777,7 @@ section {
 
 
 
-
-
-
-
-
-
-
-
+// 4.End------ of the Main dashboard scss 
 
 
 
