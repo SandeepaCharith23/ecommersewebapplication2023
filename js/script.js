@@ -12,6 +12,7 @@ let productBnnerslideIcons=document.querySelectorAll('.slide-icon');
 let productBnnernumberslideIcons=productBnnerSlides.length;
 let adminloginbutton=document.getElementById('adminloginbutton');
 
+
 // //admin login function
 adminloginbutton.addEventListener('click',function(){
    window.location.href='maindashboard.html';
@@ -96,6 +97,13 @@ menubutton.onscroll=()=>{
     menubutton.classList.remove('fa-times');
     navbar.classList.remove('active-navbar');
 }
+
+
+//productshome page js elements
+document.getElementById('searchformclosebutton2').onclick=()=>{
+    console.log('Inside close button in search form in product home');
+    document.getElementById('producthomesearchform').remove('active');
+};
 
 
 
